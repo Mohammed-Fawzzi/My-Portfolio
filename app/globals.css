@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* General */
+::-webkit-scrollbar {
+  @apply w-3;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-accent;
+}
+
+@layer base {
+  body {
+    @apply bg-primary text-white leading-loose font-Chakra;
+  }
+  .h1 {
+    @apply text-[45px] xl:text-[65px] leading-[1.1] font-semibold;
+  }
+  .h2 {
+    @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
+  }
+  .h3 {
+    @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
+  }
+  .h4 {
+    @apply text-[15px] xl:text-[20px] leading-[1.1] font-semibold;
+  }
+}
