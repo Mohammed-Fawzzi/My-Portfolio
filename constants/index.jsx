@@ -263,7 +263,7 @@ export const featuredProjectsData = [
 export const reactNextData = [
   {
     id: 1,
-    image: "/projects/react-next/react1",
+    image: "/projects/react-next/react1.webp",
     title: "Digital Marketing",
     description:
       "Digital Marketing: is a web application designed to help you explore effective digital marketing strategies and tools. This app provides a seamless and professionally designed user interface to ensure an exceptional user experience.",
