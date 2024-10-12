@@ -425,7 +425,7 @@ export const jsData = [
   },
   {
     id: 3,
-    image: "/projects/js/js3.webp",
+    image: "/projects/js/quotes.webp",
     title: "Quotes of the Day",
     description:
       "Quotes of the Day: a web application designed to brighten your day with inspiring quotes. Fetching random quotes from the (QuotableAPI), this app lets you enjoy and share motivational wisdom effortlessly. ",
@@ -457,7 +457,7 @@ export const jsData = [
   },
   {
     id: 5,
-    image: "/projects/js/js5.webp",
+    image: "/projects/js/game.webp",
     title: "Game Reviews",
     description:
       "Game Reviews: a web application designed to help you explore and discover free-to-play games using the (Free-to-Play Games Database API). and with Modules js and Object Oriented programming.",
