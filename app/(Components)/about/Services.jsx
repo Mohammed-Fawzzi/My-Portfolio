@@ -26,13 +26,14 @@ export default function Services() {
               key={service.id}
               className="flex flex-col items-center space-y-3 justify-center shadow-lg p-5 border border-accent cursor-pointer bg-primary"
             >
-              <div className="border-2 border-accent rounded-full w-20 h-20 flex justify-center items-center hover:bg-accent transition-colors duration-300">
+              <div className="border-2 border-accent rounded-xl w-24 h-24 flex justify-center items-center hover:bg-accent transition-colors duration-300">
                 <Image
                   src={service.icon}
                   width={50}
                   height={50}
-                  alt="services-image"
-                ></Image>
+                  alt={service.title} 
+                  className="object-contain w-auto h-auto" 
+                />
               </div>
               <p className="text-xl mt-4 font-bold">{service.title}</p>
               <p className="text-md font-bold text-opacity-80 text-neutral-300 text-center">

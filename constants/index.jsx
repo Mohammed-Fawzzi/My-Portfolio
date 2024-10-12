@@ -212,6 +212,7 @@ export const featuredProjectsData = [
       <FaMobileAlt />,
     ],
     demo: "https://mohammed-fawzzi.github.io/SHOPIQ/",
+    repo: "https://github.com/Mohammed-Fawzzi/SHOPIQ",
   },
   {
     id: 2,
@@ -226,7 +227,8 @@ export const featuredProjectsData = [
       <SiReactquery />,
       <FaMobileAlt />,
     ],
-    demo: "https://mohammed-fawzzi.github.io/Streamo/#/login",
+    demo: "https://mohammed-fawzzi.github.io/Streamo/",
+    repo: "https://github.com/Mohammed-Fawzzi/Streamo",
   },
   {
     id: 3,
@@ -242,6 +244,7 @@ export const featuredProjectsData = [
       <FaMobileAlt />,
     ],
     demo: "https://fast-food-tnc.vercel.app/",
+    repo: "https://github.com/Mohammed-Fawzzi/Fast-Food",
   },
   {
     id: 4,
@@ -257,6 +260,7 @@ export const featuredProjectsData = [
       <FaMobileAlt />,
     ],
     demo: "https://mohammed-fawzzi.github.io/Game-Review/",
+    repo: "https://github.com/Mohammed-Fawzzi/Game-Review",
   },
 ];
 

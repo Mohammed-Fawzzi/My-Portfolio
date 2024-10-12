@@ -20,7 +20,7 @@ export default function ReactAndNext() {
         >
           {/* Image */}
           <div className="relative h-80">
-            <Image src={project.image} layout="fill" alt={project.title} />
+            <Image src={project.image} fill={true} alt={project.title} />
             {/* Layer */}
             <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
             {/* Links to Demo and Code */}

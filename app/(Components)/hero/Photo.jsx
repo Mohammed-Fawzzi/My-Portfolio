@@ -28,6 +28,7 @@ export default function Photo() {
             quality={100}
             fill
             priority
+            sizes="(max-width: 640px) 100vw, (min-width: 641px) 50vw" 
             className="object-contain"
           />
         </motion.div>
@@ -36,7 +37,7 @@ export default function Photo() {
           className="w-[300px] h-[300px] xl:w-[506px] xl:h-[506px]"
           fill="transparent"
           viewBox="0 0 510 510"
-          xmlns="https://www.w3.org/200/svg"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <motion.circle
             cx="253"
