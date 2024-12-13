@@ -41,7 +41,7 @@ export const socials = [
   {
     id: 1,
     icon: <FaLinkedin />,
-    url: "https://www.linkedin.com/in/mohamed-fawzzi-72b962280/",
+    url: "https://www.linkedin.com/in/mohamed-fawzzi98/",
   },
   {
     id: 2,
