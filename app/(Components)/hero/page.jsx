@@ -57,7 +57,7 @@ export default function Hero() {
               animate="visible"
               className="flex flex-col items-center md:flex-row md:space-x-6"
             >
-              <Link href="/MohamedFawzziResume.pdf" download target="_blank">
+              <Link href="/MohamedFawzziCV.pdf" download target="_blank">
                 <button className="font-bold border border-accent text-accent hover:bg-accent-HOVER hover:text-primary py-2 px-5 rounded-full transition-all duration-500 flex items-center justify-center">
                   <span>Download Resume</span>{" "}
                   <FiDownload className="ml-2 text-icons" />
