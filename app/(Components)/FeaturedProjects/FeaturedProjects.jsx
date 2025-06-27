@@ -1,7 +1,5 @@
 "use client";
 import { featuredProjectsData } from "@/constants";
-import { FadeLeft } from "@/constants/animation";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -15,16 +13,13 @@ export default function FeaturedProjects() {
         {/* Title */}
         <div className="text-center">
           <h1 className="text-4xl font-bold">
-            Featured <span className="text-accent">Projects</span>
+            Freelance <span className="text-accent">Projects</span>
           </h1>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 my-10 gap-8">
-          {featuredProjectsData.map((project, index) => (
-            <motion.div
-              variants={FadeLeft(index * 0.1)}
-              initial="hidden"
-              whileInView={"visible"}
+          {featuredProjectsData.map((project) => (
+            <div
               key={project.id}
               className="shadow-lg border border-neutral-700/80 relative group"
             >
@@ -48,14 +43,6 @@ export default function FeaturedProjects() {
                   >
                     <span>Demo</span> <MdArrowOutward />
                   </Link>
-                  <Link
-                    href={project.repo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-lg font-semibold bg-accent hover:bg-accent-HOVER text-primary p-2 mx-2 flex space-x-1 justify-center items-center"
-                  >
-                    <span>Code</span> <FaGithub />
-                  </Link>
                 </div>
               </div>
               {/* Info */}
@@ -75,7 +62,7 @@ export default function FeaturedProjects() {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

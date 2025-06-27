@@ -22,7 +22,7 @@ export default function Navbar() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.3, delay: 0.1 }}
-      className="sticky top-0 z-50 bg-primary backdrop-blur-lg shadow-lg py-3 flex"
+      className="sticky top-0 z-50 bg-primary backdrop-blur-lg shadow-sm py-3 flex"
     >
       <div className="container mx-auto relative lg:text-sm">
         <div className="flex justify-between items-center">

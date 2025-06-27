@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { FaLightbulb, FaTools, FaUserGraduate } from "react-icons/fa";
+import { FaLaptopCode, FaLightbulb, FaTools, FaUserGraduate } from "react-icons/fa";
 import { GrUserExpert } from "react-icons/gr";
 import { motion } from "framer-motion";
 import { FadeLeft, FadeRight } from "@/constants/animation";
@@ -64,7 +64,7 @@ export default function About() {
                   </h3>
                   <p className="leading-tight font-semibold">
                     I have over 1 year of experience as a Front-End Developer
-                    and have completed more than 30 projects, including several
+                    and have completed more than 35 projects, including several
                     where I integrated APIs.
                   </p>
                 </motion.div>
@@ -97,7 +97,7 @@ export default function About() {
                 </div>
               </div>
 
-              {/* Experience */}
+              {/* Freelancing */}
               <div className="flex md:contents">
                 <div className="col-start-5 col-end-6 mr-10 md:mx-auto relative">
                   <div className="h-full w-6 flex items-center justify-center">
@@ -113,11 +113,14 @@ export default function About() {
                   className="bg-accent col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md"
                 >
                   <h3 className="font-semibold text-2xl mb-1 flex space-x-2 items-center">
-                    <FaLightbulb /> <span>Problem Solving</span>
+                    <FaLaptopCode /> <span>Freelancing</span>
                   </h3>
                   <p className="leading-tight font-semibold">
-                    I have problem-solving skills that allow me to effectively
-                    analyze challenges and implement practical solutions.
+                    I work as a freelance front-end developer, building
+                    responsive and modern web applications using React.js and
+                    Next.js. I collaborate directly with clients to deliver
+                    real-world solutions focused on performance, accessibility,
+                    and user experience.
                   </p>
                 </motion.div>
               </div>

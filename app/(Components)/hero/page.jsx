@@ -15,14 +15,6 @@ export default function Hero() {
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* Info */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <motion.span
-              variants={FadeRight(0.6)}
-              initial="hidden"
-              animate="visible"
-              className="text-xl text-accent text-center md:text-left"
-            >
-              Front End Developer
-            </motion.span>
             <motion.h1
               variants={FadeRight(0.9)}
               initial="hidden"
@@ -45,11 +37,14 @@ export default function Hero() {
               animate="visible"
               className="text-neutral-300 max-w-[500px] mb-9"
             >
-              Front-End developer specializing in building interactive and
-              seamless user interfaces using React and Next.js. I believe in the
-              importance of detail in design and user experience, and I always
-              strive to deliver applications that are fast, efficient, and easy
-              to use.
+              Front-End Developer and Freelancer with 1+ year of experience
+              building high-performance, responsive, and SEO-friendly web
+              applications using React.js and Next.js. I collaborate with
+              clients to develop modern web solutions, integrating RESTful APIs
+              and managing complex state using Redux Toolkit, React Query, and
+              Context API. Committed to writing clean, accessible, and
+              maintainable code with a strong focus on performance, scalability,
+              and user-centric design.
             </motion.p>
             <motion.div
               variants={FadeRight(1.8)}
@@ -59,7 +54,7 @@ export default function Hero() {
             >
               <Link href="/MohamedFawzziCV.pdf" download target="_blank">
                 <button className="font-bold border border-accent text-accent hover:bg-accent-HOVER hover:text-primary py-2 px-5 rounded-full transition-all duration-500 flex items-center justify-center">
-                  <span>Download Resume</span>{" "}
+                  <span>Download Cv</span>{" "}
                   <FiDownload className="ml-2 text-icons" />
                 </button>
               </Link>

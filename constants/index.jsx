@@ -22,8 +22,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { DiJqueryLogo } from "react-icons/di";
-import { SiReactquery } from "react-icons/si";
+import { SiReactquery, SiTypescript } from "react-icons/si";
 import { HiBellAlert } from "react-icons/hi2";
 import { SiReactrouter } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
@@ -51,12 +50,12 @@ export const socials = [
   {
     id: 3,
     icon: <FaWhatsapp />,
-    url: "tel:+201021580334",
+    url: "https://wa.me/+201021580334",
   },
   {
     id: 4,
     icon: <FaTelegramPlane />,
-    url: "tel:+201552760491",
+    url: "https://t.me/MohamedFawzzi",
   },
 ];
 
@@ -66,7 +65,7 @@ export const states = [
     text: "Years of coding.",
   },
   {
-    num: 30,
+    num: 35,
     text: "Projects Completing.",
   },
   {
@@ -82,42 +81,42 @@ export const states = [
 export const technicalSkills = [
   {
     id: 1,
-    title: "Html",
+    title: "HTML",
     icon: <FaHtml5 />,
   },
   {
     id: 2,
-    title: "Css",
+    title: "CSS",
     icon: <FaCss3 />,
   },
   {
     id: 3,
+    title: "JavaScript",
+    icon: <FaJs />,
+  },
+  {
+    id: 4,
+    title: "TypeScript",
+    icon: <SiTypescript />,
+  },
+  {
+    id: 5,
     title: "Bootstrap",
     icon: <FaBootstrap />,
   },
   {
-    id: 4,
-    title: "Javascript",
-    icon: <FaJs />,
-  },
-  {
-    id: 5,
-    title: "Jquery",
-    icon: <DiJqueryLogo />,
-  },
-  {
     id: 6,
-    title: "Tailwind css",
+    title: "Tailwind CSS",
     icon: <RiTailwindCssFill />,
   },
   {
     id: 7,
-    title: "React js",
+    title: "React.js",
     icon: <FaReact />,
   },
   {
     id: 8,
-    title: "Next js",
+    title: "Next.js",
     icon: <RiNextjsFill />,
   },
 ];
@@ -160,40 +159,43 @@ export const servicesData = [
     id: 1,
     icon: "/services/s1.webp",
     title: "Web Applications",
-    description: "Tailored web apps built with the latest technologies.",
+    description:
+      "I build custom web applications for businesses and individuals using modern frameworks like React and Next.js, tailored to real-world needs.",
   },
   {
     id: 2,
     title: "API Integration",
     icon: "/services/s2.webp",
     description:
-      "Seamless integration for smooth data sharing and functionality.",
+      "I integrate external APIs and back-end services to create dynamic and data-driven applications that work seamlessly.",
   },
   {
     id: 3,
-    title: "User Interfaces",
+    title: "Responsive Designs",
     icon: "/services/s3.webp",
     description:
-      "Engaging, responsive front-end designs enhancing user interactions.",
+      "I ensure that all websites are fully responsive and mobile-friendly, providing an optimal experience across all devices.",
   },
   {
     id: 4,
-    title: "Responsive Designs",
+    title: "User Interfaces",
     icon: "/services/s4.webp",
     description:
-      "Adaptive designs that fit all screens, ensuring great user experiences.",
+      "I design and develop engaging front-end interfaces that are intuitive, responsive, SEO-friendly, and aligned with your brand identity.",
   },
   {
     id: 5,
     icon: "/services/s5.webp",
     title: "Speed Optimization",
-    description: "Boost performance with faster load times and optimization.",
+    description:
+      "I optimize performance, reduce load times, and apply best practices to make your site faster and more efficient.",
   },
   {
     id: 6,
     icon: "/services/s6.webp",
     title: "Website Management",
-    description: "Easy content management systems with flexible controls.",
+    description:
+      "I offer ongoing support, content updates, and flexible website management solutions to keep your site running smoothly.",
   },
 ];
 
@@ -201,66 +203,32 @@ export const featuredProjectsData = [
   {
     id: 1,
     image: "/fp1.webp",
-    title: "SHOPIQ [ E-commerce ]",
+    title: "Mahmoud Elazony – E-Learning Platform",
     description:
-      "SHOPIQ: is a comprehensive e-commerce platform that allows you to browse products, search for any item, and register accounts. The site uses a (real API).",
+      "A comprehensive e-learning platform for online exams and student assessments. Includes an admin dashboard, secure authentication, unique student access codes, and full backend integration. Built to support scalable assessments and enhance admin control.",
     languages: [
       <FaReact />,
       <FaBootstrap />,
-      <SiReactquery />,
       <FaProjectDiagram />,
+      <SiReactquery />,
       <FaMobileAlt />,
     ],
-    demo: "https://mohammed-fawzzi.github.io/SHOPIQ/",
-    repo: "https://github.com/Mohammed-Fawzzi/SHOPIQ",
+    demo: "https://mahmoud-ebrahim-elazony.tech/",
   },
   {
     id: 2,
     image: "/fp2.webp",
-    title: "Streamo",
+    title: "E4Traders – Trading Education Platform",
     description:
-      "Streamo: is a comprehensive movie site that allows you to watch movies and TV shows, search for any film or series, and register accounts. The site uses the (TMDB API).",
+      "A secure education platform delivering encrypted video-based courses with watermark protection, Google login, and progressive content unlocking. Features Stripe payment, admin dashboard, and smooth user navigation.",
     languages: [
-      <FaReact />,
-      <FaBootstrap />,
-      <FaProjectDiagram />,
-      <SiReactquery />,
-      <FaMobileAlt />,
-    ],
-    demo: "https://mohammed-fawzzi.github.io/Streamo/",
-    repo: "https://github.com/Mohammed-Fawzzi/Streamo",
-  },
-  {
-    id: 3,
-    image: "/fp3.webp",
-    title: "Fast Food TNC",
-    description:
-      "Fast Food TNC: is a comprehensive food site that allows you to explore a wide variety of fast food meals, search for any dish, and view detailed recipes and ingredients. The site uses (TheMealDB API).",
-    languages: [
-      <RiNextjsFill />,
       <FaReact />,
       <RiTailwindCssFill />,
+      <SiReactquery />,
       <FaProjectDiagram />,
       <FaMobileAlt />,
     ],
-    demo: "https://fast-food-tnc.vercel.app/",
-    repo: "https://github.com/Mohammed-Fawzzi/Fast-Food",
-  },
-  {
-    id: 4,
-    image: "/fp4.webp",
-    title: "Game Reviews",
-    description:
-      "Game Reviews: a web application designed to help you explore and discover free-to-play games using the (Free-to-Play Games Database API).",
-    languages: [
-      <FaHtml5 />,
-      <FaBootstrap />,
-      <FaJs />,
-      <FaProjectDiagram />,
-      <FaMobileAlt />,
-    ],
-    demo: "https://mohammed-fawzzi.github.io/Game-Review/",
-    repo: "https://github.com/Mohammed-Fawzzi/Game-Review",
+    demo: "https://e4traders.com/invite?code=X5W94HDLE",
   },
 ];
 

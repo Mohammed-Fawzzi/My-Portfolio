@@ -1,7 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { servicesData } from "@/constants";
-import { FadeLeft, FadeUp } from "@/constants/animation";
 import Image from "next/image";
 
 export default function Services() {
@@ -15,31 +13,30 @@ export default function Services() {
           </h1>
         </div>
       </div>
-      {/* services */}
+
+      {/* Services */}
       <div className="container my-10 overflow-hidden">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 items-stretch">
           {servicesData.map((service, index) => (
-            <motion.div
-              variants={FadeUp(index * 0.1)}
-              initial="hidden"
-              whileInView={"visible"}
+            <div
               key={service.id}
-              className="flex flex-col items-center space-y-3 justify-center shadow-lg p-5 border border-accent cursor-pointer bg-primary"
+              viewport={{ once: true }}
+              className="flex flex-col items-center justify-start space-y-4 shadow-lg p-5 border border-accent rounded-lg bg-primary min-h-[270px]"
             >
-              <div className="border-2 border-accent rounded-xl w-24 h-24 flex justify-center items-center hover:bg-accent transition-colors duration-300">
+              <div className="border-2 border-accent rounded-sm w-20 h-20 cursor-pointer flex justify-center items-center hover:bg-accent transition-colors duration-300">
                 <Image
                   src={service.icon}
                   width={50}
                   height={50}
-                  alt={service.title} 
-                  className="object-contain w-auto h-auto" 
+                  alt={service.title}
+                  className="object-contain"
                 />
               </div>
-              <p className="text-xl mt-4 font-bold">{service.title}</p>
-              <p className="text-md font-bold text-opacity-80 text-neutral-300 text-center">
+              <p className="text-xl font-bold text-center">{service.title}</p>
+              <p className="text-sm font-medium text-neutral-300 text-center leading-relaxed">
                 {service.description}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

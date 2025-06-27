@@ -20,7 +20,7 @@ export default function Photo() {
             opacity: 1,
             transition: { delay: 1.4, duration: 0.4, ease: "easeInOut" },
           }}
-          className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute rounded-full shadow-xl"
+          className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute rounded-full"
         >
           <Image
             src={"/hero.webp"}
