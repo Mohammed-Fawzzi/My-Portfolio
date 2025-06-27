@@ -32,7 +32,7 @@ export default function About() {
                     <FaUserGraduate /> <span>Education</span>
                   </h3>
                   <p className="leading-tight font-semibold">
-                    Bachelor's degree in Computer Science with a strong
+                    Bachelor&apos;s degree in Computer Science with a strong
                     foundation in software development and web technologies.
                   </p>
                 </motion.div>
