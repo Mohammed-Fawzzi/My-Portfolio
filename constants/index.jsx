@@ -1,5 +1,6 @@
 import {
   FaBootstrap,
+  FaCcStripe,
   FaChartPie,
   FaClipboardList,
   FaCss3,
@@ -211,7 +212,7 @@ export const featuredProjectsData = [
       <FaReact />,
       <FaBootstrap />,
       <FaProjectDiagram />,
-      <SiReactquery />,
+      <TbBrandFramerMotion />,
       <FaMobileAlt />,
     ],
     demo: "https://mahmoud-ebrahim-elazony.tech/",
@@ -225,7 +226,7 @@ export const featuredProjectsData = [
     languages: [
       <FaReact />,
       <RiTailwindCssFill />,
-      <SiReactquery />,
+      <FaCcStripe />,
       <FaProjectDiagram />,
       <FaMobileAlt />,
     ],
