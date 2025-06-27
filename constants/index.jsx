@@ -28,6 +28,7 @@ import { SiReactrouter } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import { LiaMousePointerSolid } from "react-icons/lia";
 import { CiDark } from "react-icons/ci";
+import { FaUserCircle } from "react-icons/fa";
 
 export const navItems = [
   { label: "Home", href: "/" },
@@ -229,6 +230,34 @@ export const featuredProjectsData = [
       <FaMobileAlt />,
     ],
     demo: "https://e4traders.com/invite?code=X5W94HDLE",
+  },
+];
+
+export const reviewsData = [
+  {
+    name: "Noura S.",
+    icon: <FaUserCircle size={48} />,
+    text: "سعدت كثيرًا بالتعامل معك، كنت سريعًا، محترفًا، ومتعاونًا في كل مرحلة من المشروع. جودة العمل كانت ممتازة، وإن شاء الله سيكون بينا تعاون مستقبلي في مشاريع أخرى.",
+  },
+  {
+    name: "Ahmed E.",
+    icon: <FaUserCircle size={48} />,
+    text: "أحب أشكرك جزيل الشكر على الخدمة الرائعة اللي قدمتها لي. بصراحة كنت محترف في التعامل، وسريع في التنفيذ، وجودة الشغل كانت فوق التوقعات. أنصح أي عميل بالتعامل معك، وإن شاء الله مش هيكون آخر تعامل بينا.",
+  },
+  {
+    name: "Anas Z.",
+    icon: <FaUserCircle size={48} />,
+    text: "أفضل مطور ويب يمكن التعامل معه على الإطلاق! خبرة استثنائية في التصميم، تواصل ممتاز وسرعة في التنفيذ، والنتيجة النهائية كانت موقع إلكتروني بأداء مثالي يفوق كل التوقعات.",
+  },
+  {
+    name: "European Intl. F.",
+    icon: <FaUserCircle size={48} />,
+    text: "إنسان مجتهد وشاطر بعلمه وأنصح به بشدة. ارجوا التفاوض معه قبل الشراء لأنه سيفيدك جدًا. وفقه الله لكل خير.",
+  },
+  {
+    name: "Mohammed E.",
+    icon: <FaUserCircle size={48} />,
+    text: "بشمهندس محمد أبدعت في تنفيذ المشروع بجودة عالية وإتقان كبير، وفوق ذلك كنت سريع جدًا في التسليم. تعامل احترافي وتواصل ممتاز. أنصح بالتعامل معه بشدة، ولن يكون آخر تعاون بيننا بإذن الله.",
   },
 ];
 

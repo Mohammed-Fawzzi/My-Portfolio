@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { FaLaptopCode, FaLightbulb, FaTools, FaUserGraduate } from "react-icons/fa";
+import { FaLaptopCode, FaTools, FaUserGraduate } from "react-icons/fa";
 import { GrUserExpert } from "react-icons/gr";
 import { motion } from "framer-motion";
 import { FadeLeft, FadeRight } from "@/constants/animation";
@@ -32,8 +32,8 @@ export default function About() {
                     <FaUserGraduate /> <span>Education</span>
                   </h3>
                   <p className="leading-tight font-semibold">
-                    I graduated from Higher Institute for Computer Science and
-                    Information Systems
+                    Bachelor's degree in Computer Science with a strong
+                    foundation in software development and web technologies.
                   </p>
                 </motion.div>
                 <div className="col-start-5 col-end-6 md:mx-auto relative mr-10">
@@ -64,7 +64,7 @@ export default function About() {
                   </h3>
                   <p className="leading-tight font-semibold">
                     I have over 1 year of experience as a Front-End Developer
-                    and have completed more than 35 projects, including several
+                    and have completed more than 30 projects, including several
                     where I integrated APIs.
                   </p>
                 </motion.div>
