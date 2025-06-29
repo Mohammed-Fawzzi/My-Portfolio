@@ -70,7 +70,9 @@ export default function FeaturedProjects() {
       </section>
 
       {/* Testimonials */}
-      <Testimonials />
+      <div className="container">
+        <Testimonials />
+      </div>
     </>
   );
 }

@@ -17,6 +17,7 @@ module.exports = {
       fontFamily: {
         Chakra: ["Chakra Petch", "sans-serif"],
         varela: ["Varela Round", "sans-serif"],
+        roboto: ['Roboto', 'sans-serif'],
       },
 
       container: {
@@ -29,7 +30,7 @@ module.exports = {
           "2xl": "6rem",
         },
       },
-      
+
       fontSize: {
         "icons": "24px",
       }
