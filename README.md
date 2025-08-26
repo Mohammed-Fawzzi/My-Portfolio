@@ -18,17 +18,6 @@ Portfolio Website is a personal web application designed to showcase your person
 - Tailwind CSS: For utility-first, responsive styling.
 - Framer Motion: For adding fluid, interactive animations.
 
-## Preview
-
-Here are some previews of the portfolio website:
-
-![Preview Image](/preview/preview.png)
-![Preview Image 1](/preview/preview1.png)
-![Preview Image 2](/preview/preview2.png)
-![Preview Image 3](/preview/preview3.png)
-![Preview Image 4](/preview/preview4.png)
-![Preview Image 5](/preview/preview5.png)
-
 ## Live Demo
 
 Check out the live demo [here](https://mohamedfawzzi.vercel.app/).
