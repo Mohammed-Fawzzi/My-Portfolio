@@ -209,17 +209,16 @@ export const featuredProjectsData = [
   {
     id: 1,
     image: "/fp1.webp",
-    title: "Mahmoud Elazony – E-Learning Platform",
+    title: "Waqt Al Sayana – Car Maintenance Platform",
     description:
-      "A comprehensive e-learning platform for online exams and student assessments. Includes an admin dashboard, secure authentication, unique student access codes, and full backend integration. Built to support scalable assessments and enhance admin control.",
+      "Developed a car maintenance reminder platform tracking upcoming service needs (oil changes, filters, battery, tires) and supporting payments via Moyasar. Implemented user profiles, service history tracking, automated scheduling of reminders, chatbot integration, dark/light mode toggle, and a secure Admin Dashboard.",
     languages: [
       <FaReact />,
-      <FaBootstrap />,
+      <RiTailwindCssFill />,
       <FaProjectDiagram />,
-      <TbBrandFramerMotion />,
       <FaMobileAlt />,
     ],
-    demo: "https://mahmoud-ebrahim-elazony.tech/",
+    demo: "https://waqtalsayana.com/",
   },
   {
     id: 2,
@@ -239,20 +238,35 @@ export const featuredProjectsData = [
   {
     id: 3,
     image: "/fp3.webp",
-    title: "Tawkeele – Multi-language Umrah Platform",
-    description: `A multi-language website that enables users to perform Umrah or Hajj on behalf of their loved ones through authorized individuals. The platform provides a clear and user-friendly interface to submit requests, track progress, and complete the process with ease. Built with modern design, Arabic RTL support, and smooth performance.`,
+    title: "Dababat – Motorcycle Marketplace Platform",
+    description:
+      "Developed a motorcycle marketplace platform supporting user authentication, ad and service management, and real-time chat between users. Implemented Google login, role-based access control, and secure user management. Built an Admin Dashboard for managing users, ads, and analytics using Chart.js.",
     languages: [
-      <FaHtml5 />,
-      <FaCss3Alt />,
-      <FaBootstrap />,
-      <FaJsSquare />,
+      <FaReact />,
+      <RiTailwindCssFill />,
+      <FaProjectDiagram />,
       <FaMobileAlt />,
     ],
-    demo: "https://tawkeele.com/",
+    demo: "https://dababat.com/",
   },
   {
     id: 4,
     image: "/fp4.webp",
+    title: "Mahmoud Elazony – E-Learning Platform",
+    description:
+      "A comprehensive e-learning platform for online exams and student assessments. Includes an admin dashboard, secure authentication, unique student access codes, and full backend integration. Built to support scalable assessments and enhance admin control.",
+    languages: [
+      <FaReact />,
+      <FaBootstrap />,
+      <FaProjectDiagram />,
+      <TbBrandFramerMotion />,
+      <FaMobileAlt />,
+    ],
+    demo: "https://mahmoud-ebrahim-elazony.tech/",
+  },
+  {
+    id: 5,
+    image: "/fp5.webp",
     title: "AlDwish Law – Legal Consultancy Website",
     description: `AlDwish Law is the official website for Abdulhakim AlDwish Law Firm in Saudi Arabia. It offers comprehensive legal services including rights and commercial cases, presented through a clean, modern, and fully responsive design. The platform supports Arabic content and was deployed by me on Hostinger with full SEO optimization.`,
     languages: [
@@ -263,6 +277,20 @@ export const featuredProjectsData = [
       <FaMobileAlt />,
     ],
     demo: "https://aldwishlaw.com/",
+  },
+  {
+    id: 6,
+    image: "/fp6.webp",
+    title: "Tawkeele – Multi-language Umrah Platform",
+    description: `A multi-language website that enables users to perform Umrah or Hajj on behalf of their loved ones through authorized individuals. The platform provides a clear and user-friendly interface to submit requests, track progress, and complete the process with ease. Built with modern design, Arabic RTL support, and smooth performance.`,
+    languages: [
+      <FaHtml5 />,
+      <FaCss3Alt />,
+      <FaBootstrap />,
+      <FaJsSquare />,
+      <FaMobileAlt />,
+    ],
+    demo: "https://tawkeele.com/",
   },
 ];
 
