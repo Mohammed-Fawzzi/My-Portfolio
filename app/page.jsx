@@ -1,13 +1,11 @@
-import About from "./(Components)/about/page";
-import FeaturedProjects from "./(Components)/FeaturedProjects/FeaturedProjects";
 import Hero from "./(Components)/hero/page";
+import FreelanceProjects from "./(Components)/FreelanceProjects/FreelanceProjects";
 
 export default function Home() {
   return (
     <div>
       <Hero />
-      <About />
-      <FeaturedProjects />
+      <FreelanceProjects />
     </div>
   );
 }

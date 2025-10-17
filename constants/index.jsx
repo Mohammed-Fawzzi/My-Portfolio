@@ -67,19 +67,19 @@ export const socials = [
 
 export const states = [
   {
-    num: 1,
+    num: 2,
     text: "Years of coding.",
   },
   {
-    num: 35,
+    num: 40,
     text: "Projects Completing.",
   },
   {
-    num: 8,
+    num: 10,
     text: "Technologies Mastered.",
   },
   {
-    num: 15,
+    num: 20,
     text: "Frameworks and Libraries Used.",
   },
 ];
@@ -107,13 +107,13 @@ export const technicalSkills = [
   },
   {
     id: 5,
-    title: "Bootstrap",
-    icon: <FaBootstrap />,
+    title: "Tailwind CSS",
+    icon: <RiTailwindCssFill />,
   },
   {
     id: 6,
-    title: "Tailwind CSS",
-    icon: <RiTailwindCssFill />,
+    title: "Bootstrap",
+    icon: <FaBootstrap />,
   },
   {
     id: 7,
@@ -587,6 +587,21 @@ export const uiData = [
   {
     id: 1,
     image: "/projects/ui/ui1.webp",
+    title: "Tawkeele – Multi-language Umrah Platform",
+    description: `A multi-language website that enables users to perform Umrah or Hajj on behalf of their loved ones through authorized individuals.`,
+    languages: [
+      <FaHtml5 />,
+      <FaCss3Alt />,
+      <FaBootstrap />,
+      <FaJsSquare />,
+      <FaMobileAlt />,
+    ],
+    demo: "https://tawkeele.com/",
+    repo: "https://github.com/Mohammed-Fawzzi/Tawkeele",
+  },
+  {
+    id: 2,
+    image: "/projects/ui/ui2.webp",
     title: "Hostit",
     description:
       "Hostit:  Our platform offers user-friendly interfaces and robust hosting capabilities to ensure your websites run smoothly and efficiently.",
@@ -595,8 +610,8 @@ export const uiData = [
     repo: "https://github.com/Mohammed-Fawzzi/Hostit",
   },
   {
-    id: 2,
-    image: "/projects/ui/ui2.webp",
+    id: 3,
+    image: "/projects/ui/ui3.webp",
     title: "Mealify",
     description:
       "Mealify :  is a restaurant website , featuring user-friendly interfaces, a dark mode, and robust navigation capabilities to ensure your browsing experience is smooth and enjoyable.",
@@ -605,8 +620,8 @@ export const uiData = [
     repo: "https://github.com/Mohammed-Fawzzi/Mealify",
   },
   {
-    id: 3,
-    image: "/projects/ui/ui3.webp",
+    id: 4,
+    image: "/projects/ui/ui4.webp",
     title: "DevFolio",
     description:
       "DevFolio: a portfolio website that showcases the talents and projects of a full stack developer named Morgan Freeman. With a clean and user-friendly interface.",
@@ -620,29 +635,13 @@ export const uiData = [
     demo: "https://mohammed-fawzzi.github.io/DevFolio/",
     repo: "https://github.com/Mohammed-Fawzzi/DevFolio",
   },
-  {
-    id: 4,
-    image: "/projects/ui/ui4.webp",
-    title: "UI-Registration",
-    description:
-      "UI-Registration: This is a web application designed to create and manage user registration forms,with a responsive design. with to pages signin & signup",
-    languages: [
-      <FaHtml5 />,
-      <FaCss3 />,
-      <FaBootstrap />,
-      <FaFontAwesome />,
-      <FaMobileAlt />,
-    ],
-    demo: "https://mohammed-fawzzi.github.io/UI-Registration/",
-    repo: "https://github.com/Mohammed-Fawzzi/UI-Registration",
-  },
 ];
 
 export const contactData = [
   {
     id: 1,
     icon: <FaUser className="text-icons text-accent" />,
-    text: "Mohamed Fawzzi Mohamed",
+    text: "Mohamed Fawzzi",
   },
   {
     id: 2,
@@ -653,10 +652,12 @@ export const contactData = [
     id: 3,
     icon: <FaPhoneAlt className="text-icons text-accent" />,
     text: "+201021580334",
+    link: "https://wa.me/201021580334",
   },
   {
     id: 4,
     icon: <FaEnvelope className="text-icons text-accent" />,
     text: "moahmedfawzzimohamed@gmail.com",
+    link: "mailto:moahmedfawzzimohamed@gmail.com",
   },
 ];

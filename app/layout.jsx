@@ -1,3 +1,4 @@
+import { ToastContainer } from "react-toastify";
 import Footer from "./(Components)/Footer/Footer";
 import Navbar from "./(Components)/Navbar/Navbar";
 import "./globals.css";
@@ -13,6 +14,17 @@ export default function RootLayout({ children }) {
       <body className="overflow-x-hidden">
         <Navbar />
         {children}
+        <ToastContainer
+          position="top-right"
+          autoClose={2000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
         <Footer />
       </body>
     </html>
