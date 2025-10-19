@@ -16,7 +16,7 @@ export default function ReactAndNext() {
           initial="hidden"
           whileInView={"visible"}
           key={project.id}
-          className="shadow-lg border border-neutral-700/80 relative group"
+          className="shadow-lg border border-neutral-700/80 relative group flex flex-col"
         >
           {/* Image */}
           <div className="relative h-80">
@@ -45,12 +45,16 @@ export default function ReactAndNext() {
           </div>
 
           {/* Info */}
-          <div className="p-5">
-            <h2 className="text-xl font-semibold text-accent">
-              {project.title}
-            </h2>
-            <p className="text-natural-300 my-5">{project.description}</p>
-            <div className="flex space-x-1 mt-2">
+          <div className="p-5 flex flex-col flex-grow justify-between">
+            <div>
+              <h2 className="text-xl font-semibold text-accent">
+                {project.title}
+              </h2>
+              <p className="text-natural-300 my-5">{project.description}</p>
+            </div>
+
+            {/* Icons at the bottom */}
+            <div className="flex space-x-2 mt-4">
               {project.languages.map((lang, index) => (
                 <span
                   key={index}

@@ -21,7 +21,6 @@ import {
   FaProjectDiagram,
   FaReact,
   FaRocket,
-  FaSearch,
   FaTelegramPlane,
   FaUser,
   FaWhatsapp,
@@ -34,6 +33,7 @@ import { TbBrandFramerMotion } from "react-icons/tb";
 import { LiaMousePointerSolid } from "react-icons/lia";
 import { CiDark } from "react-icons/ci";
 import { FaUserCircle } from "react-icons/fa";
+import { MdGTranslate } from "react-icons/md";
 
 export const navItems = [
   { label: "Home", href: "/" },
@@ -209,35 +209,21 @@ export const featuredProjectsData = [
   {
     id: 1,
     image: "/fp1.webp",
-    title: "Waqt Al Sayana – Car Maintenance Platform",
+    title: "Clickat Ads – Marketing & Advertising Platform",
     description:
-      "Developed a car maintenance reminder platform tracking upcoming service needs (oil changes, filters, battery, tires) and supporting payments via Moyasar. Implemented user profiles, service history tracking, automated scheduling of reminders, chatbot integration, dark/light mode toggle, and a secure Admin Dashboard.",
+      "Developed a multi-language marketing platform with dark and light modes. Integrated PayPal and direct link payment methods for advertising campaign requests. Built service modules for website creation requests and social media account management.",
     languages: [
       <FaReact />,
       <RiTailwindCssFill />,
-      <FaProjectDiagram />,
-      <FaMobileAlt />,
+      <SiReactrouter />,
+      <SiReactquery />,
+      <MdGTranslate />,
     ],
-    demo: "https://waqtalsayana.com/",
+    demo: "https://clickatads.com/",
   },
   {
     id: 2,
     image: "/fp2.webp",
-    title: "E4Traders – Trading Education Platform",
-    description:
-      "A secure education platform delivering encrypted video-based courses with watermark protection, Google login, and progressive content unlocking. Features Stripe payment, admin dashboard, and smooth user navigation.",
-    languages: [
-      <FaReact />,
-      <RiTailwindCssFill />,
-      <FaCcStripe />,
-      <FaProjectDiagram />,
-      <FaMobileAlt />,
-    ],
-    demo: "https://e4traders.com/invite?code=X5W94HDLE",
-  },
-  {
-    id: 3,
-    image: "/fp3.webp",
     title: "Dababat – Motorcycle Marketplace Platform",
     description:
       "Developed a motorcycle marketplace platform supporting user authentication, ad and service management, and real-time chat between users. Implemented Google login, role-based access control, and secure user management. Built an Admin Dashboard for managing users, ads, and analytics using Chart.js.",
@@ -250,11 +236,55 @@ export const featuredProjectsData = [
     demo: "https://dababat.com/",
   },
   {
+    id: 3,
+    image: "/fp3.webp",
+    title: "Waqt Al Sayana – Car Maintenance Platform",
+    description:
+      "Developed a car maintenance reminder platform tracking upcoming service needs (oil changes, filters, battery, tires) and supporting payments via Moyasar. Implemented user profiles, service history tracking, automated scheduling of reminders, chatbot integration, dark/light mode toggle, and a secure Admin Dashboard.",
+    languages: [
+      <FaReact />,
+      <RiTailwindCssFill />,
+      <FaProjectDiagram />,
+      <FaMobileAlt />,
+    ],
+    demo: "https://waqtalsayana.com/",
+  },
+  {
     id: 4,
     image: "/fp4.webp",
+    title: "Italia Market – Authentic Italian Food & Coffee Store",
+    description:
+      "Developed a multilingual e-commerce platform for authentic Italian products including pasta, coffee, olive oil, and more. Implemented user registration/login, guest browsing, product purchasing, cart management, and dynamic translation using i18next. Designed with a modern responsive UI supporting dark/light mode and optimized for smooth shopping experiences.",
+    languages: [
+      <FaReact />,
+      <RiTailwindCssFill />,
+      <SiReactrouter />,
+      <SiReactquery />,
+      <MdGTranslate />,
+    ],
+    demo: "https://italiamarkt.com/",
+  },
+  {
+    id: 5,
+    image: "/fp5.webp",
+    title: "E4Traders – Trading Education Platform",
+    description:
+      "A secure education platform delivering encrypted video-based courses with watermark protection, Google login, and progressive content unlocking. Features Stripe payment, admin dashboard, and smooth user navigation.",
+    languages: [
+      <FaReact />,
+      <RiTailwindCssFill />,
+      <FaCcStripe />,
+      <FaProjectDiagram />,
+      <FaMobileAlt />,
+    ],
+    demo: "https://e4traders.com/invite?ref=X5W94HDLE",
+  },
+  {
+    id: 6,
+    image: "/fp6.webp",
     title: "Mahmoud Elazony – E-Learning Platform",
     description:
-      "A comprehensive e-learning platform for online exams and student assessments. Includes an admin dashboard, secure authentication, unique student access codes, and full backend integration. Built to support scalable assessments and enhance admin control.",
+      "A comprehensive e-learning platform for online exams and student assessments. Includes an admin dashboard, secure authentication, unique student access codes, and full backend integration. Built to support scalable assessments and admin control.",
     languages: [
       <FaReact />,
       <FaBootstrap />,
@@ -263,34 +293,6 @@ export const featuredProjectsData = [
       <FaMobileAlt />,
     ],
     demo: "https://mahmoud-ebrahim-elazony.tech/",
-  },
-  {
-    id: 5,
-    image: "/fp5.webp",
-    title: "AlDwish Law – Legal Consultancy Website",
-    description: `AlDwish Law is the official website for Abdulhakim AlDwish Law Firm in Saudi Arabia. It offers comprehensive legal services including rights and commercial cases, presented through a clean, modern, and fully responsive design. The platform supports Arabic content and was deployed by me on Hostinger with full SEO optimization.`,
-    languages: [
-      <FaReact />,
-      <RiTailwindCssFill />,
-      <FaGlobe />,
-      <FaSearch />,
-      <FaMobileAlt />,
-    ],
-    demo: "https://aldwishlaw.com/",
-  },
-  {
-    id: 6,
-    image: "/fp6.webp",
-    title: "Tawkeele – Multi-language Umrah Platform",
-    description: `A multi-language website that enables users to perform Umrah or Hajj on behalf of their loved ones through authorized individuals. The platform provides a clear and user-friendly interface to submit requests, track progress, and complete the process with ease. Built with modern design, Arabic RTL support, and smooth performance.`,
-    languages: [
-      <FaHtml5 />,
-      <FaCss3Alt />,
-      <FaBootstrap />,
-      <FaJsSquare />,
-      <FaMobileAlt />,
-    ],
-    demo: "https://tawkeele.com/",
   },
 ];
 

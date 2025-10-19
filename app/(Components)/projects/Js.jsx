@@ -17,7 +17,7 @@ export default function Js() {
           initial="hidden"
           whileInView={"visible"}
           key={project.id}
-          className="shadow-lg border border-neutral-700/80 relative group"
+          className="shadow-lg border border-neutral-700/80 relative group flex flex-col h-full"
         >
           {/* Image */}
           <div className="relative h-80">
@@ -46,11 +46,14 @@ export default function Js() {
           </div>
 
           {/* Info */}
-          <div className="p-5">
-            <h2 className="text-xl font-semibold text-accent">
-              {project.title}
-            </h2>
-            <p className="text-natural-300 my-5">{project.description}</p>
+          <div className="p-5 flex flex-col justify-between flex-1">
+            <div>
+              <h2 className="text-xl font-semibold text-accent">
+                {project.title}
+              </h2>
+              <p className="text-natural-300 my-5">{project.description}</p>
+            </div>
+
             <div className="flex space-x-2 mt-2">
               {project.languages.map((lang, index) => (
                 <span
