@@ -13,23 +13,23 @@ export default function Testimonials() {
     <section className="py-8 bg-primary text-white">
       <div className="container px-4 mx-auto text-center">
         <div className="flex justify-between items-center">
-          <h2 className="text-2xl lg:text-4xl font-bold mb-8">
+          <h2 className="text-lg sm:text-2xl lg:text-4xl font-bold mb-8">
             What <span className="text-accent">Clients Say</span>
           </h2>
 
           {/* Custom Arrows */}
-          <div className="flex justify-center items-center gap-6 mb-8">
+          <div className="flex justify-center items-center gap-3 sm:gap-5 mb-8">
             <button
               onClick={() => swiperRef.current?.slidePrev()}
-              className="text-primary bg-accent p-3 rounded-full hover:scale-110 transition"
+              className="text-primary bg-accent p-2 md:p-3 rounded-full hover:scale-110 transition"
             >
-              <FaArrowLeft />
+              <FaArrowLeft className="text-xs sm:text-base lg:text-lg" />
             </button>
             <button
               onClick={() => swiperRef.current?.slideNext()}
-              className="text-primary bg-accent p-3 rounded-full hover:scale-110 transition"
+              className="text-primary bg-accent p-2 md:p-3 rounded-full hover:scale-110 transition"
             >
-              <FaArrowRight />
+              <FaArrowRight className="text-xs sm:text-base lg:text-lg" />
             </button>
           </div>
         </div>

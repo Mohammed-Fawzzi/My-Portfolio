@@ -14,7 +14,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen((prev) => !prev);
   };
 
   return (
@@ -52,8 +52,7 @@ export default function Navbar() {
                     pathName === link.href
                       ? "bg-accent text-primary font-bold"
                       : ""
-                  }
-                    `}
+                  }`}
                 >
                   {link.label}
                 </Link>
@@ -98,12 +97,12 @@ export default function Navbar() {
                 >
                   <Link
                     href={link.href}
+                    onClick={toggleMenu}
                     className={`py-2 px-4 ${
                       pathName === link.href
                         ? "bg-accent text-primary font-bold"
                         : ""
-                    }
-                    `}
+                    }`}
                   >
                     {link.label}
                   </Link>
