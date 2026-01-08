@@ -7,9 +7,8 @@ import React from "react";
 export default function Footer() {
   return (
     <footer className="border-t border-neutral-700/80 py-4">
-      <div className="container mx-auto relative lg:text-sm px-2 sm:px-3">
-        <div className="flex items-center justify-between">
-          
+      <div className="container mx-auto relative lg:text-sm md:px-1">
+        <Link href="/" className="flex items-center justify-between">
           {/* Logo */}
           <motion.h1
             initial={{ opacity: 0, x: -50 }}
@@ -41,8 +40,7 @@ export default function Footer() {
               </Link>
             ))}
           </motion.div>
-
-        </div>
+        </Link>
       </div>
     </footer>
   );

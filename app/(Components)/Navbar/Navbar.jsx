@@ -25,9 +25,9 @@ export default function Navbar() {
       transition={{ duration: 0.3, delay: 0.1 }}
       className="sticky top-0 z-50 bg-primary backdrop-blur-lg shadow-sm py-3 flex"
     >
-      <div className="container mx-auto relative lg:text-sm px-1">
+      <div className="container mx-auto relative lg:text-sm md:px-1">
         <div className="flex justify-between items-center">
-          <div className="flex items-center flex-shrink-0 cursor-pointer">
+          <Link href="/" className="flex items-center flex-shrink-0 cursor-pointer">
             <motion.h1
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -37,7 +37,7 @@ export default function Navbar() {
               MF
               <span className="inline-block w-2 h-2 bg-accent rounded-full transform translate-x-[-5px] translate-y-[3px]"></span>
             </motion.h1>
-          </div>
+          </Link>
 
           {/* Desktop Nav */}
           <ul className="hidden lg:flex items-center justify-center ml-14 space-x-5">
