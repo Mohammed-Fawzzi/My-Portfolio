@@ -2,10 +2,10 @@ import { reactNextData } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { MdArrowOutward } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
 import { FadeUp } from "@/constants/animation";
 import { motion } from "framer-motion";
+import { FiExternalLink } from "react-icons/fi";
 
 export default function ReactAndNext() {
   return (
@@ -15,12 +15,13 @@ export default function ReactAndNext() {
           variants={FadeUp(index * 0.1)}
           initial="hidden"
           whileInView={"visible"}
+          viewport={{ once: true }}
           key={project.id}
-          className="shadow-lg border border-neutral-700/80 relative group flex flex-col"
+          className="shadow-lg border border-neutral-700/60 relative group flex flex-col rounded-xl"
         >
           {/* Image */}
           <div className="relative h-80">
-            <Image src={project.image} fill={true} alt={project.title} />
+            <Image src={project.image} fill={true} alt={project.title} className="rounded-t-xl"/>
             {/* Layer */}
             <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
             {/* Links to Demo and Code */}
@@ -29,15 +30,15 @@ export default function ReactAndNext() {
                 href={project.demo}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-lg font-semibold bg-accent hover:bg-accent-HOVER text-primary p-2 mx-2 flex space-x-1 justify-center items-center"
+                className="text-lg font-semibold bg-accent hover:bg-accent-HOVER text-primary p-2 mx-2 flex space-x-1 justify-center items-center rounded-md"
               >
-                <span>Demo</span> <MdArrowOutward />
+                <span>Live</span> <FiExternalLink />
               </Link>
               <Link
                 href={project.repo}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-lg font-semibold bg-accent hover:bg-accent-HOVER text-primary p-2 mx-2 flex space-x-1 justify-center items-center"
+                className="text-lg font-semibold bg-accent hover:bg-accent-HOVER text-primary p-2 mx-2 flex space-x-1 justify-center rounded-md items-center"
               >
                 <span>Code</span> <FaGithub />
               </Link>
@@ -58,7 +59,7 @@ export default function ReactAndNext() {
               {project.languages.map((lang, index) => (
                 <span
                   key={index}
-                  className="text-3xl border-2 border-accent p-2 cursor-pointer hover:bg-accent hover:text-primary transition-colors duration-300"
+                  className="text-3xl border-2 border-accent rounded-md p-2 cursor-pointer hover:bg-accent hover:text-primary transition-colors duration-300"
                 >
                   {lang}
                 </span>

@@ -2,13 +2,14 @@ import {
   FaBootstrap,
   FaCcStripe,
   FaChartPie,
+  FaChrome,
   FaClipboardList,
   FaCss3,
   FaCss3Alt,
   FaEnvelope,
   FaFontAwesome,
+  FaGitAlt,
   FaGithub,
-  FaGlobe,
   FaHtml5,
   FaJs,
   FaJsSquare,
@@ -22,11 +23,13 @@ import {
   FaReact,
   FaRocket,
   FaTelegramPlane,
+  FaTools,
   FaUser,
+  FaUserGraduate,
   FaWhatsapp,
 } from "react-icons/fa";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { SiReactquery, SiTypescript } from "react-icons/si";
+import { SiAxios, SiFramer, SiMui, SiPostman, SiReactquery, SiRedux, SiShadcnui, SiTypescript, SiVisualstudiocode } from "react-icons/si";
 import { HiBellAlert } from "react-icons/hi2";
 import { SiReactrouter } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
@@ -34,6 +37,7 @@ import { LiaMousePointerSolid } from "react-icons/lia";
 import { CiDark } from "react-icons/ci";
 import { FaUserCircle } from "react-icons/fa";
 import { MdGTranslate } from "react-icons/md";
+import { GrUserExpert } from "react-icons/gr";
 
 export const navItems = [
   { label: "Home", href: "/" },
@@ -84,48 +88,80 @@ export const states = [
   },
 ];
 
-export const technicalSkills = [
+export const aboutMe = [
   {
-    id: 1,
-    title: "HTML",
-    icon: <FaHtml5 />,
+    title: "Education",
+    desc: "Bachelor’s degree in Computer Science with a strong foundation in software development and modern web technologies.",
+    icon: <FaUserGraduate />,
+    side: "left",
+    delay: 0,
   },
   {
-    id: 2,
-    title: "CSS",
-    icon: <FaCss3 />,
+    title: "Professional Experience",
+    desc: "Front-End Developer at Petra Project Management (Remote), where I developed and maintained scalable front-end applications using React, with exposure to Next.js, while collaborating with project managers and stakeholders.",
+    icon: <GrUserExpert />,
+    side: "right",
+    delay: 0.4,
   },
   {
-    id: 3,
-    title: "JavaScript",
-    icon: <FaJs />,
+    title: "Internship",
+    desc: "Front-End Developer Intern at Dr Code, focused on building responsive web interfaces using HTML, CSS, JavaScript, and React, and integrating RESTful APIs while working closely with UI/UX designers.",
+    icon: <FaTools />,
+    side: "left",
+    delay: 0.8,
   },
   {
-    id: 4,
-    title: "TypeScript",
-    icon: <SiTypescript />,
-  },
-  {
-    id: 5,
-    title: "Tailwind CSS",
-    icon: <RiTailwindCssFill />,
-  },
-  {
-    id: 6,
-    title: "Bootstrap",
-    icon: <FaBootstrap />,
-  },
-  {
-    id: 7,
-    title: "React.js",
-    icon: <FaReact />,
-  },
-  {
-    id: 8,
-    title: "Next.js",
-    icon: <RiNextjsFill />,
+    title: "Freelancing",
+    desc: "Freelance Front-End Developer working on projects across education, e-commerce, marketing, and trading platforms, delivering responsive, SEO-friendly web applications with a strong focus on performance, accessibility, and modern UI/UX.",
+    icon: <FaLaptopCode />,
+    side: "right",
+    delay: 0.4,
   },
 ];
+
+export const skillsData = {
+  // Languages & Markup
+  languages: [
+    { id: 1, title: "HTML5", icon: <FaHtml5 /> },
+    { id: 2, title: "CSS3", icon: <FaCss3 /> },
+    { id: 3, title: "JavaScript (ES6+)", icon: <FaJs /> },
+    { id: 4, title: "TypeScript", icon: <SiTypescript /> },
+  ],
+
+  // Frameworks & Libraries
+  frameworks: [
+    { id: 5, title: "React.js", icon: <FaReact /> },
+    { id: 6, title: "Next.js", icon: <RiNextjsFill /> },
+    { id: 7, title: "Context API", icon: <FaReact /> },
+    { id: 8, title: "React Query", icon: <SiReactquery /> },
+    { id: 9, title: "Redux Toolkit", icon: <SiRedux /> },
+  ],
+
+  // Styling & Animation
+  styling: [
+    { id: 10, title: "Tailwind CSS", icon: <RiTailwindCssFill /> },
+    { id: 11, title: "Bootstrap", icon: <FaBootstrap /> },
+    { id: 12, title: "Material UI (MUI)", icon: <SiMui /> },
+    { id: 13, title: "shadcn/ui", icon: <SiShadcnui /> },
+    { id: 14, title: "Framer Motion", icon: <SiFramer /> },
+  ],
+
+  // APIs & Integration
+  api: [
+    { id: 15, title: "RESTful APIs", icon: <SiPostman /> },
+    { id: 16, title: "Axios", icon: <SiAxios /> },
+    { id: 17, title: "Postman", icon: <SiPostman /> },
+  ],
+
+  // Version Control & Tools
+  tools: [
+    { id: 18, title: "Git", icon: <FaGitAlt /> },
+    { id: 19, title: "GitHub", icon: <FaGithub /> },
+    { id: 20, title: "Chrome DevTools", icon: <FaChrome /> },
+    { id: 21, title: "VS Code", icon: <SiVisualstudiocode /> },
+  ],
+};
+
 
 export const services = [
   {
@@ -166,14 +202,14 @@ export const servicesData = [
     icon: "/services/s1.webp",
     title: "Web Applications",
     description:
-      "I build custom web applications for businesses and individuals using modern frameworks like React and Next.js, tailored to real-world needs.",
+      "I build custom web applications for businesses and individuals using modern frameworks like React and Next.js, focusing on performance, scalability, and real-world needs.",
   },
   {
     id: 2,
     title: "API Integration",
     icon: "/services/s2.webp",
     description:
-      "I integrate external APIs and back-end services to create dynamic and data-driven applications that work seamlessly.",
+      "I integrate external APIs and back-end services to create secure, dynamic, and data-driven applications that work seamlessly.",
   },
   {
     id: 3,
@@ -187,31 +223,46 @@ export const servicesData = [
     title: "User Interfaces",
     icon: "/services/s4.webp",
     description:
-      "I design and develop engaging front-end interfaces that are intuitive, responsive, SEO-friendly, and aligned with your brand identity.",
+      "I design and develop engaging front-end interfaces that are intuitive, responsive, accessible, and aligned with your brand identity.",
   },
   {
     id: 5,
     icon: "/services/s5.webp",
     title: "Speed Optimization",
     description:
-      "I optimize performance, reduce load times, and apply best practices to make your site faster and more efficient.",
+      "I optimize performance, reduce load times, and apply best practices to make your site faster, more efficient, and user-friendly.",
   },
   {
     id: 6,
     icon: "/services/s6.webp",
     title: "Website Management",
     description:
-      "I offer ongoing support, content updates, and flexible website management solutions to keep your site running smoothly.",
-  },
+      "I build custom web applications using React and Next.js with a strong focus on performance, scalability, and SEO best practices.",
+},
 ];
 
 export const featuredProjectsData = [
   {
     id: 1,
     image: "/fp1.webp",
+    title: "Ma3aak – Teacher Marketing Platform",
+    description:
+      "Built and maintained the frontend of a multi-service teacher marketplace using Next.js. Integrated PayPal payment flows including checkout and transaction status handling. Implemented advanced search and filtering for services and listings. Developed an Admin Dashboard using React to manage platform content and operations.",
+    languages: [
+      <FaReact />,
+      <RiTailwindCssFill />,
+      <SiReactquery />,
+      <MdGTranslate />,
+      <FaProjectDiagram />,
+    ],
+    demo: "https://ma3aak.com/",
+  },
+  {
+    id: 2,
+    image: "/fp2.webp",
     title: "Clickat Ads – Marketing & Advertising Platform",
     description:
-      "Developed a multi-language marketing platform with dark and light modes. Integrated PayPal and direct link payment methods for advertising campaign requests. Built service modules for website creation requests and social media account management.",
+      "Developed a multi-language marketing and advertising platform with dark and light modes. Integrated PayPal and direct payment links for advertising campaign requests. Built service modules for website creation and social media account management.",
     languages: [
       <FaReact />,
       <RiTailwindCssFill />,
@@ -222,51 +273,8 @@ export const featuredProjectsData = [
     demo: "https://clickatads.com/",
   },
   {
-    id: 2,
-    image: "/fp2.webp",
-    title: "Dababat – Motorcycle Marketplace Platform",
-    description:
-      "Developed a motorcycle marketplace platform supporting user authentication, ad and service management, and real-time chat between users. Implemented Google login, role-based access control, and secure user management. Built an Admin Dashboard for managing users, ads, and analytics using Chart.js.",
-    languages: [
-      <FaReact />,
-      <RiTailwindCssFill />,
-      <FaProjectDiagram />,
-      <FaMobileAlt />,
-    ],
-    demo: "https://dababat.com/",
-  },
-  {
     id: 3,
     image: "/fp3.webp",
-    title: "Waqt Al Sayana – Car Maintenance Platform",
-    description:
-      "Developed a car maintenance reminder platform tracking upcoming service needs (oil changes, filters, battery, tires) and supporting payments via Moyasar. Implemented user profiles, service history tracking, automated scheduling of reminders, chatbot integration, dark/light mode toggle, and a secure Admin Dashboard.",
-    languages: [
-      <FaReact />,
-      <RiTailwindCssFill />,
-      <FaProjectDiagram />,
-      <FaMobileAlt />,
-    ],
-    demo: "https://waqtalsayana.com/",
-  },
-  {
-    id: 4,
-    image: "/fp4.webp",
-    title: "Italia Market – Authentic Italian Food & Coffee Store",
-    description:
-      "Developed a multilingual e-commerce platform for authentic Italian products including pasta, coffee, olive oil, and more. Implemented user registration/login, guest browsing, product purchasing, cart management, and dynamic translation using i18next. Designed with a modern responsive UI supporting dark/light mode and optimized for smooth shopping experiences.",
-    languages: [
-      <FaReact />,
-      <RiTailwindCssFill />,
-      <SiReactrouter />,
-      <SiReactquery />,
-      <MdGTranslate />,
-    ],
-    demo: "https://italiamarkt.com/",
-  },
-  {
-    id: 5,
-    image: "/fp5.webp",
     title: "E4Traders – Trading Education Platform",
     description:
       "A secure education platform delivering encrypted video-based courses with watermark protection, Google login, and progressive content unlocking. Features Stripe payment, admin dashboard, and smooth user navigation.",
@@ -280,19 +288,46 @@ export const featuredProjectsData = [
     demo: "https://e4traders.com/invite?ref=X5W94HDLE",
   },
   {
-    id: 6,
-    image: "/fp6.webp",
-    title: "Mahmoud Elazony – E-Learning Platform",
+    id: 4,
+    image: "/fp4.webp",
+    title: "Dababat – Motorcycle Marketplace Platform",
     description:
-      "A comprehensive e-learning platform for online exams and student assessments. Includes an admin dashboard, secure authentication, unique student access codes, and full backend integration. Built to support scalable assessments and admin control.",
+      "Developed a motorcycle marketplace platform supporting user authentication, ad and service management, and real-time chat between users. Implemented Google login, role-based access control, and an Admin Dashboard for managing users, ads, and analytics.",
     languages: [
       <FaReact />,
-      <FaBootstrap />,
+      <RiTailwindCssFill />,
       <FaProjectDiagram />,
-      <TbBrandFramerMotion />,
       <FaMobileAlt />,
     ],
-    demo: "https://mahmoud-ebrahim-elazony.tech/",
+    demo: "https://dababat.com/",
+  },
+  {
+    id: 5,
+    image: "/fp5.webp",
+    title: "Waqt Al Sayana – Car Maintenance Platform",
+    description:
+      "Developed a car maintenance reminder platform that tracks upcoming service needs such as oil changes, filters, batteries, and tires. Implemented user profiles, service history tracking, automated reminders, payment integration, and an Admin Dashboard.",
+    languages: [
+      <FaReact />,
+      <RiTailwindCssFill />,
+      <FaProjectDiagram />,
+      <FaMobileAlt />,
+    ],
+    demo: "https://waqtalsayana.com/",
+  },
+  {
+    id: 6,
+    image: "/fp6.webp",
+    title: "Special Home Care – Home Healthcare Services Platform",
+    description:
+      "Developed a platform for requesting home nursing and healthcare services with ease. Users can book services directly from their phones and receive professional healthcare support at home with safety and convenience in mind.",
+    languages: [
+      <FaReact />,
+      <RiTailwindCssFill />,
+      <FaProjectDiagram />,
+      <FaMobileAlt />,
+    ],
+    demo: "https://special-home-care.com/",
   },
 ];
 
@@ -300,27 +335,27 @@ export const reviewsData = [
   {
     name: "Noura S.",
     icon: <FaUserCircle size={48} />,
-    text: "سعدت كثيرًا بالتعامل معك، كنت سريعًا، محترفًا، ومتعاونًا في كل مرحلة من المشروع. جودة العمل كانت ممتازة، وإن شاء الله سيكون بينا تعاون مستقبلي في مشاريع أخرى.",
+    text: "I really enjoyed working with Mohamed. He was fast, professional, and very cooperative throughout every stage of the project. The quality of work was excellent, and I look forward to working with him again on future projects.",
   },
   {
     name: "Ahmed E.",
     icon: <FaUserCircle size={48} />,
-    text: "أحب أشكرك جزيل الشكر على الخدمة الرائعة اللي قدمتها لي. بصراحة كنت محترف في التعامل، وسريع في التنفيذ، وجودة الشغل كانت فوق التوقعات. أنصح أي عميل بالتعامل معك، وإن شاء الله مش هيكون آخر تعامل بينا.",
+    text: "I would like to sincerely thank Mohamed for the outstanding service. He was highly professional, quick to deliver, and the quality of work exceeded my expectations. I strongly recommend working with him, and this definitely won’t be our last collaboration.",
   },
   {
     name: "Anas Z.",
     icon: <FaUserCircle size={48} />,
-    text: "أفضل مطور ويب يمكن التعامل معه على الإطلاق! خبرة استثنائية في التصميم، تواصل ممتاز وسرعة في التنفيذ، والنتيجة النهائية كانت موقع إلكتروني بأداء مثالي يفوق كل التوقعات.",
+    text: "One of the best web developers I’ve worked with! Exceptional design skills, excellent communication, and fast delivery. The final result was a high-performance website that exceeded all expectations.",
   },
   {
-    name: "European Intl. F.",
+    name: "Islam M.",
     icon: <FaUserCircle size={48} />,
-    text: "إنسان مجتهد وشاطر بعلمه وأنصح به بشدة. ارجوا التفاوض معه قبل الشراء لأنه سيفيدك جدًا. وفقه الله لكل خير.",
+    text: "A dedicated and highly skilled developer. I strongly recommend working with him. I suggest discussing project details beforehand, as his experience and insights add great value to any project.",
   },
   {
     name: "Mohammed E.",
     icon: <FaUserCircle size={48} />,
-    text: "بشمهندس محمد أبدعت في تنفيذ المشروع بجودة عالية وإتقان كبير، وفوق ذلك كنت سريع جدًا في التسليم. تعامل احترافي وتواصل ممتاز. أنصح بالتعامل معه بشدة، ولن يكون آخر تعاون بيننا بإذن الله.",
+    text: "Mohamed delivered the project with outstanding quality and great attention to detail. He was extremely fast with delivery and very professional in communication. I highly recommend working with him, and I’m sure this won’t be our last collaboration.",
   },
 ];
 

@@ -2,11 +2,12 @@
 import { socials } from "@/constants";
 import Link from "next/link";
 import React from "react";
-import Photo from "./Photo";
 import { FiDownload } from "react-icons/fi";
 import Stats from "./Stats";
 import { motion } from "framer-motion";
 import { FadeRight } from "@/constants/animation";
+import Image from "next/image";
+import About from "../about/page";
 
 export default function Hero() {
   return (
@@ -19,7 +20,7 @@ export default function Hero() {
               variants={FadeRight(0.9)}
               initial="hidden"
               animate="visible"
-              className="h1 mb-6"
+              className="h2 mb-6"
             >
               Hello, I am <br />
               <motion.span
@@ -35,16 +36,9 @@ export default function Hero() {
               variants={FadeRight(1.6)}
               initial="hidden"
               animate="visible"
-              className="text-neutral-300 max-w-[500px] mb-9"
+              className="text-neutral-300 max-w-[500px] mb-6"
             >
-              Front-End Developer and Freelancer with 1+ year of experience
-              building high-performance, responsive, and SEO-friendly web
-              applications using React.js and Next.js. I collaborate with
-              clients to develop modern web solutions, integrating RESTful APIs
-              and managing complex state using Redux Toolkit, React Query, and
-              Context API. Committed to writing clean, accessible, and
-              maintainable code with a strong focus on performance, scalability,
-              and user-centric design.
+              Front-End Developer with over 1 year of practical experience building responsive, high-performance, and SEO-friendly web applications using React.js and Next.js. I have worked on real-world projects through company experience, internships, and freelance work, collaborating with clients and teams to deliver modern web solutions. Experienced in integrating RESTful APIs and managing application state using Redux Toolkit, React Query, and Context API. I focus on writing clean, accessible, and maintainable code with strong attention to performance, and user-centered design.
             </motion.p>
             <motion.div
               variants={FadeRight(1.8)}
@@ -53,7 +47,7 @@ export default function Hero() {
               className="flex flex-col items-center md:flex-row md:space-x-6"
             >
               <Link href="/MohamedFawzziCV.pdf" download target="_blank">
-                <button className="font-bold border border-accent text-accent hover:bg-accent-HOVER hover:text-primary py-2 px-5 rounded-full transition-all duration-500 flex items-center justify-center">
+                <button className="font-bold border border-accent text-accent hover:bg-accent-HOVER hover:text-primary py-2 px-5 rounded-lg transition-all duration-500 flex items-center justify-center">
                   <span>Download Cv</span>{" "}
                   <FiDownload className="ml-2 text-icons" />
                 </button>
@@ -66,7 +60,7 @@ export default function Hero() {
                     rel="noopener noreferrer"
                     key={item.id}
                   >
-                    <div className="flex items-center justify-center w-12 h-12 border border-accent text-accent hover:bg-accent-HOVER hover:text-primary rounded-full transition-all duration-500 text-icons mb-8 xl:mb-0">
+                    <div className="flex items-center justify-center w-12 h-12 border border-accent text-accent hover:bg-accent-HOVER hover:text-primary rounded-lg transition-all duration-500 text-icons mb-8 xl:mb-0">
                       {item.icon}
                     </div>
                   </Link>
@@ -76,12 +70,15 @@ export default function Hero() {
           </div>
           {/* Photo */}
           <div className="order-1 xl:order-none mb-8 xl:mb-0 mt-5">
-            <Photo />
+            <Image src={"/avatar.webp"} alt="avatar" className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px]" width={400} height={200}/>
           </div>
         </div>
       </div>
       {/* States */}
       <Stats />
+
+      {/* About without skills and services */}
+      <About showExtras={false} />
     </section>
   );
 }

@@ -3,8 +3,8 @@ import { featuredProjectsData } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { MdArrowOutward } from "react-icons/md";
 import Testimonials from "./Testimonials";
+import { FiExternalLink } from "react-icons/fi";
 
 export default function FeaturedProjects() {
   return (
@@ -22,7 +22,7 @@ export default function FeaturedProjects() {
             {featuredProjectsData.map((project) => (
               <div
                 key={project.id}
-                className="shadow-lg border border-neutral-700/80 relative group flex flex-col h-full"
+                className="shadow-lg border border-neutral-700/60 relative group flex flex-col h-full rounded-xl"
               >
                 {/* Image */}
                 <div className="relative h-80">
@@ -31,6 +31,7 @@ export default function FeaturedProjects() {
                     fill={true}
                     alt={project.title}
                     sizes="(max-width: 640px) 100vw, (min-width: 641px) 50vw"
+                    className="rounded-t-xl"
                   />
                   {/* Layer */}
                   <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
@@ -40,9 +41,9 @@ export default function FeaturedProjects() {
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-lg font-semibold bg-accent hover:bg-accent-HOVER text-primary p-2 mx-2 flex space-x-1 justify-center items-center"
+                      className="text-lg font-semibold bg-accent hover:bg-accent-HOVER text-primary p-2 mx-2 flex space-x-1 justify-center items-center rounded-md"
                     >
-                      <span>Demo</span> <MdArrowOutward />
+                      <span>Live</span> <FiExternalLink />
                     </Link>
                   </div>
                 </div>
@@ -62,7 +63,7 @@ export default function FeaturedProjects() {
                     {project.languages.map((lang, index) => (
                       <span
                         key={index}
-                        className="text-3xl border-2 border-accent p-2 cursor-pointer hover:bg-accent hover:text-primary transition-colors duration-300"
+                        className="text-3xl border-2 border-accent rounded-md p-2 cursor-pointer hover:bg-accent hover:text-primary transition-colors duration-300"
                       >
                         {lang}
                       </span>

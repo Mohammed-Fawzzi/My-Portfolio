@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import { servicesData } from "@/constants";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Services() {
   return (
@@ -18,12 +20,21 @@ export default function Services() {
       <div className="container my-10 overflow-hidden">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 items-stretch">
           {servicesData.map((service, index) => (
-            <div
+            <motion.div
               key={service.id}
+              initial={{ opacity: 0, x: 80 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="flex flex-col items-center justify-start space-y-4 shadow-lg p-5 border border-accent rounded-lg bg-primary min-h-[270px]"
+              transition={{
+                duration: 0.6,
+                delay: index * 0.15,
+                ease: "easeOut",
+              }}
+              className="flex flex-col items-center justify-start space-y-4
+                shadow-lg p-5 border border-accent
+                rounded-xl bg-primary min-h-[270px]"
             >
-              <div className="border-2 border-accent rounded-sm w-20 h-20 cursor-pointer flex justify-center items-center hover:bg-accent transition-colors duration-300">
+              <div className="border-2 border-accent rounded-xl w-20 h-20 cursor-pointer flex justify-center items-center hover:bg-accent transition-colors duration-300">
                 <Image
                   src={service.icon}
                   width={50}
@@ -32,11 +43,15 @@ export default function Services() {
                   className="object-contain"
                 />
               </div>
-              <p className="text-xl font-bold text-center">{service.title}</p>
+
+              <p className="text-xl font-bold text-center">
+                {service.title}
+              </p>
+
               <p className="text-sm font-medium text-neutral-300 text-center leading-relaxed">
                 {service.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
