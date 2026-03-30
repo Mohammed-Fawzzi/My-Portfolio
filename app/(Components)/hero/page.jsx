@@ -38,7 +38,7 @@ export default function Hero() {
               animate="visible"
               className="text-neutral-300 max-w-[500px] mb-6"
             >
-              Front-End Developer with over 1 year of practical experience building responsive, high-performance, and SEO-friendly web applications using React.js and Next.js. I have worked on real-world projects through company experience, internships, and freelance work, collaborating with clients and teams to deliver modern web solutions. Experienced in integrating RESTful APIs and managing application state using Redux Toolkit, React Query, and Context API. I focus on writing clean, accessible, and maintainable code with strong attention to performance, and user-centered design.
+              Front-End Developer with over 2 years of practical experience building responsive, high-performance, and SEO-friendly web applications using React.js and Next.js. I have worked on real-world projects through company experience, internships, and freelance work, collaborating with clients and teams to deliver modern web solutions. Experienced in integrating RESTful APIs and managing application state using Redux Toolkit, React Query, and Context API. I focus on writing clean, accessible, and maintainable code with strong attention to performance, and user-centered design.
             </motion.p>
             <motion.div
               variants={FadeRight(1.8)}
