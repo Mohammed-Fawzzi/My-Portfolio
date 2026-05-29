@@ -56,12 +56,12 @@ export default function ReactAndNext() {
 
             {/* Icons at the bottom */}
             <div className="flex space-x-2 mt-4">
-              {project.languages.map((lang, index) => (
+              {project.languages.map((Icon, index) => (
                 <span
                   key={index}
                   className="text-3xl border-2 border-accent rounded-md p-2 cursor-pointer hover:bg-accent hover:text-primary transition-colors duration-300"
                 >
-                  {lang}
+                  <Icon />
                 </span>
               ))}
             </div>
