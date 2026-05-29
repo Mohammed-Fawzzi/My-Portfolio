@@ -7,14 +7,16 @@ export default function Skills() {
   const [active, setActive] = useState("languages");
   const tabSkills = [
     { key: "languages", label: "Languages & Markup" },
-    { key: "frameworks", label: "Frameworks & Libraries" },
+    { key: "frameworks", label: "Frameworks" },
+    { key: "stateManagement", label: "State Management" },
     { key: "styling", label: "Styling & Animation" },
     { key: "api", label: "APIs & Integration" },
+    { key: "testing", label: "Testing" },
     { key: "tools", label: "Version Control & Tools" },
   ];
   
   return (
-    <section className="py-16">
+    <section className="py-16 overflow-x-hidden">
       <div className="container">
         {/* Title */}
         <div className="text-center mb-10">
@@ -23,42 +25,29 @@ export default function Skills() {
           </h1>
         </div>
 
-        {/* Tabs */}
-        <div className="mb-10">
-          <div className="
-            grid 
-            grid-cols-1 
-            sm:grid-cols-2 
-            md:grid-cols-3 
-            lg:grid-cols-5 
-            gap-3 
-            w-full
-          ">
+        {/* Tabs — grid on mobile/tablet, equal flex row on lg+ */}
+        <div className="mb-10 w-full overflow-hidden">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 w-full lg:flex lg:flex-row lg:items-stretch lg:gap-2">
             {tabSkills.map((item) => (
               <button
                 key={item.key}
                 onClick={() => setActive(item.key)}
                 className={`
-                  relative px-5 py-2 rounded-md
-                  text-sm font-medium
+                  w-full lg:flex-1 lg:min-w-0
+                  min-h-[44px] lg:min-h-[52px]
+                  flex items-center justify-center
+                  rounded-md text-center leading-snug
+                  text-[11px] sm:text-xs lg:text-[11.2px] 
                   border border-neutral-700/60
-                  transition-all duration-300
+                  transition-colors duration-300 
                   ${
                     active === item.key
-                      ? "text-primary"
+                      ? "bg-accent text-primary"
                       : "text-neutral-400 hover:text-neutral-100"
                   }
                 `}
               >
-                {active === item.key && (
-                  <motion.span
-                    layoutId="activeTab"
-                    className="absolute inset-0 rounded-md bg-accent"
-                    transition={{ type: "spring", stiffness: 400, damping: 30 }}
-                  />
-                )}
-
-                <span className="relative z-10">{item.label}</span>
+                <span className="block max-w-full font-bold">{item.label}</span>
               </button>
             ))}
           </div>
