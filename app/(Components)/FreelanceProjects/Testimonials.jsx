@@ -12,7 +12,7 @@ export default function Testimonials() {
   const [activeReview, setActiveReview] = useState(null);
 
   return (
-    <section className="py-8 bg-primary text-white">
+    <section className="py-8 bg-primary text-white overflow-x-hidden">
       <div className="container px-4 mx-auto text-center">
         {/* Header */}
         <div className="flex justify-between items-center">

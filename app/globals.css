@@ -46,12 +46,26 @@
 }
 
 /* General */
+html {
+  scrollbar-width: 8px;
+  scrollbar-color: rgb(var(--accent)) rgb(var(--background));
+}
+
 ::-webkit-scrollbar {
-  @apply w-3;
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-accent;
+  background-color: rgb(var(--accent));
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(var(--accent-hover));
 }
 
 @layer base {
@@ -108,6 +122,20 @@
   /* Text/icons on solid accent backgrounds (buttons, nav pill, timeline cards) */
   .text-on-accent {
     color: rgb(var(--accent-on-solid));
+  }
+
+  .nav-scroll-track {
+    left: 0;
+    width: 100vw;
+    background-color: rgb(var(--border) / 0.35);
+  }
+
+  .nav-scroll-progress {
+    background: linear-gradient(
+      to right,
+      rgb(var(--accent)),
+      rgb(var(--accent-hover))
+    );
   }
 }
 

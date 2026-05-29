@@ -27,9 +27,12 @@ export default function ClientProviders({ children }) {
   return (
     <ThemeProvider>
       <Navbar />
-      {children}
+      <div className="overflow-x-hidden">
+        {children}
+        <Footer />
+        <div id="scroll-end-marker" aria-hidden="true" className="h-px w-px" />
+      </div>
       <ThemedToast />
-      <Footer />
     </ThemeProvider>
   );
 }

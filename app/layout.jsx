@@ -61,7 +61,7 @@ export default function RootLayout({ children }) {
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body className="overflow-x-hidden">
+      <body>
         <ClientProviders>{children}</ClientProviders>
       </body>
     </html>
