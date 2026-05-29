@@ -167,7 +167,7 @@ export default function Navbar() {
       </motion.nav>
 
       <div
-        className="nav-scroll-track pointer-events-none fixed left-0 z-[60] h-1 overflow-hidden"
+        className="nav-scroll-track pointer-events-none fixed left-0 z-[60] h-[5px] overflow-hidden"
         style={{ top: barTop }}
         role="progressbar"
         aria-valuenow={Math.round(scrollProgress)}
