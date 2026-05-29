@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { skillsData } from "@/constants";
+import { skillsData } from "@/app/constants";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Skills() {

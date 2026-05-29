@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { FadeLeft, FadeRight, FadeUp } from "@/constants/animation";
-import { contactData } from "@/constants";
+import { FadeLeft, FadeRight, FadeUp } from "@/app/constants/animation";
+import { contactData } from "@/app/constants";
 import Image from "next/image";
 
 export default function Contact() {

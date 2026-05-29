@@ -1,5 +1,5 @@
 "use client";
-import { navItems } from "@/constants";
+import { navItems } from "@/app/constants";
 import { motion } from "framer-motion";
 import { RiMenu3Line } from "react-icons/ri";
 import { IoClose } from "react-icons/io5";
@@ -7,6 +7,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { FaPaperPlane } from "react-icons/fa";
+import ThemeToggle from "@/app/providers/ThemeProvider/ThemeToggle";
 
 export default function Navbar() {
   let pathName = usePathname();
@@ -68,9 +69,8 @@ export default function Navbar() {
                     )}
 
                     <span
-                      className={`relative z-10 font-bold transition-colors ${
-                        isActive ? "text-primary" : "text-white hover:text-accent"
-                      }`}
+                      className={`relative z-10 font-bold transition-colors ${isActive ? "text-primary" : "text-white hover:text-accent"
+                        }`}
                     >
                       {link.label}
                     </span>
@@ -79,6 +79,7 @@ export default function Navbar() {
               );
             })}
 
+            {/* 
             <motion.li
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
@@ -93,12 +94,21 @@ export default function Navbar() {
                 Hire Me
                 <FaPaperPlane />
               </Link>
+            </motion.li> */}
+
+            <motion.li
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.3, delay: (navItems.length + 1) * 0.1 }}
+            >
+              <ThemeToggle />
             </motion.li>
           </ul>
 
-          {/* Toggle */}
-          <div className="lg:hidden md:flex flex-col justify-end">
-            <button onClick={toggleMenu}>
+          {/* Mobile: theme + menu */}
+          <div className="lg:hidden flex items-center gap-3">
+            <ThemeToggle />
+            <button type="button" onClick={toggleMenu} aria-label="Toggle menu">
               {isMenuOpen ? (
                 <IoClose className="text-accent text-icons" />
               ) : (
@@ -141,11 +151,10 @@ export default function Navbar() {
                       )}
 
                       <span
-                        className={`relative z-10 font-bold ${
-                          isActive
-                            ? "text-primary"
-                            : "text-white hover:text-accent"
-                        }`}
+                        className={`relative z-10 font-bold ${isActive
+                          ? "text-primary"
+                          : "text-white hover:text-accent"
+                          }`}
                       >
                         {link.label}
                       </span>
@@ -154,7 +163,7 @@ export default function Navbar() {
                 );
               })}
 
-              <motion.li
+              {/* <motion.li
                 initial={{ opacity: 0, x: -100 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: navItems.length * 0.1 }}
@@ -166,7 +175,7 @@ export default function Navbar() {
                 >
                   Hire Me
                 </Link>
-              </motion.li>
+              </motion.li> */}
             </ul>
           </div>
         )}

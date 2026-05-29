@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { FadeLeft, FadeRight } from "@/constants/animation";
+import { FadeLeft, FadeRight } from "@/app/constants/animation";
 import Skills from "./Skills";
 import Services from "./Services";
-import { aboutMe } from "@/constants";
+import { aboutMe } from "@/app/constants";
 
 export default function About({ showExtras = true }) {
   return (

@@ -2,7 +2,7 @@
 import React from "react";
 import Photo from "./(Components)/hero/Photo";
 import { motion } from "framer-motion";
-import { FadeLeft } from "@/constants/animation";
+import { FadeLeft } from "@/app/constants/animation";
 import { FaArrowAltCircleLeft } from "react-icons/fa";
 import Link from "next/link";
 

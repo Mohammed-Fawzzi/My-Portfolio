@@ -1,5 +1,5 @@
 "use client";
-import { states } from "@/constants";
+import { states } from "@/app/constants";
 import React from "react";
 import CountUp from "react-countup";
 

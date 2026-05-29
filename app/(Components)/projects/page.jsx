@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { FadeRight, FadeUp } from "@/constants/animation";
+import { FadeRight, FadeUp } from "@/app/constants/animation";
 import Ui from "./Ui";
 import Js from "./Js";
 import ReactAndNext from "./reactAndNext";

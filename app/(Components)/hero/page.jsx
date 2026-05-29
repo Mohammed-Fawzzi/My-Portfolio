@@ -1,11 +1,11 @@
 "use client";
-import { socials } from "@/constants";
+import { socials } from "@/app/constants";
 import Link from "next/link";
 import React from "react";
 import { FiDownload } from "react-icons/fi";
 import Stats from "./Stats";
 import { motion } from "framer-motion";
-import { FadeRight } from "@/constants/animation";
+import { FadeRight } from "@/app/constants/animation";
 import Image from "next/image";
 import About from "../about/page";
 
@@ -44,15 +44,15 @@ export default function Hero() {
               variants={FadeRight(1.8)}
               initial="hidden"
               animate="visible"
-              className="flex flex-col items-center md:flex-row md:space-x-6"
+              className="flex flex-col items-center md:flex-row md:space-x-4"
             >
               <Link href="/MohamedFawzziCV.pdf" download target="_blank">
-                <button className="font-bold border border-accent text-accent hover:bg-accent-HOVER hover:text-primary py-2 px-5 rounded-lg transition-all duration-500 flex items-center justify-center">
+                <button className="font-bold border border-accent text-accent hover:bg-accent-HOVER hover:text-primary py-2 px-5 rounded-full transition-all duration-300 flex items-center justify-center">
                   <span>Download Cv</span>{" "}
                   <FiDownload className="ml-2 text-icons" />
                 </button>
               </Link>
-              <div className="flex justify-center items-center space-x-6 md:space-x-4 mt-4 md:mt-0">
+              <div className="flex justify-center items-center space-x-4 md:space-x-3 mt-4 md:mt-0">
                 {socials.map((item) => (
                   <Link
                     href={item.url}
@@ -60,7 +60,7 @@ export default function Hero() {
                     rel="noopener noreferrer"
                     key={item.id}
                   >
-                    <div className="flex items-center justify-center w-12 h-12 border border-accent text-accent hover:bg-accent-HOVER hover:text-primary rounded-lg transition-all duration-500 text-icons mb-8 xl:mb-0">
+                    <div className="flex items-center justify-center w-12 h-12 border border-accent text-accent hover:bg-accent-HOVER hover:text-primary rounded-full transition-all duration-300 text-icons mb-8 xl:mb-0">
                       {item.icon}
                     </div>
                   </Link>

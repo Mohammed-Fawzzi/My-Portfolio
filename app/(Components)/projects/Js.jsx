@@ -1,10 +1,10 @@
 "use client";
-import { jsData } from "@/constants";
+import { jsData } from "@/app/constants";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaGithub } from "react-icons/fa";
-import { FadeRight } from "@/constants/animation";
+import { FadeRight } from "@/app/constants/animation";
 import { motion } from "framer-motion";
 import { FiExternalLink } from "react-icons/fi";
 

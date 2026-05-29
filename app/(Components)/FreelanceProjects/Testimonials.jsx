@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import { reviewsData } from "@/constants";
+import { reviewsData } from "@/app/constants";
 import { FaStar, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 export default function Testimonials() {

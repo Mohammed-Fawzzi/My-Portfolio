@@ -1,5 +1,5 @@
 "use client";
-import { featuredProjectsData } from "@/constants";
+import { featuredProjectsData } from "@/app/constants";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";

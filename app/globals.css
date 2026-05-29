@@ -4,6 +4,31 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Theme tokens */
+:root,
+.dark {
+  --background: 28 28 34;
+  --foreground: 255 255 255;
+  --muted-100: 245 245 245;
+  --muted-200: 229 229 229;
+  --muted-300: 212 212 212;
+  --muted-400: 163 163 163;
+  --border: 64 64 64;
+  --surface: 39 39 44;
+}
+
+.light {
+  /* Off-white — light but not pure white */
+  --background: 236 238 242;
+  --foreground: 28 28 34;
+  --muted-100: 64 64 64;
+  --muted-200: 82 82 82;
+  --muted-300: 96 96 104;
+  --muted-400: 120 120 128;
+  --border: 200 204 212;
+  --surface: 228 230 236;
+}
+
 /* General */
 ::-webkit-scrollbar {
   @apply w-3;
@@ -15,7 +40,9 @@
 
 @layer base {
   body {
-    @apply bg-primary text-white leading-loose font-Chakra;
+    background-color: rgb(var(--background));
+    color: rgb(var(--foreground));
+    @apply leading-loose font-Chakra;
   }
 
   .h1 {
@@ -33,6 +60,60 @@
   .h4 {
     @apply text-[15px] xl:text-[20px] leading-[1.1] font-semibold;
   }
+}
+
+@layer utilities {
+  .bg-primary {
+    background-color: rgb(var(--background)) !important;
+  }
+}
+
+/* Light mode: remap existing utility classes */
+html.light .text-white {
+  color: rgb(var(--foreground)) !important;
+}
+
+html.light .text-white\/80 {
+  color: rgb(var(--foreground) / 0.8) !important;
+}
+
+html.light .text-neutral-100 {
+  color: rgb(var(--muted-100)) !important;
+}
+
+html.light .text-neutral-200 {
+  color: rgb(var(--muted-200)) !important;
+}
+
+html.light .text-neutral-300 {
+  color: rgb(var(--muted-300)) !important;
+}
+
+html.light .text-neutral-400 {
+  color: rgb(var(--muted-400)) !important;
+}
+
+html.light .hover\:text-neutral-100:hover {
+  color: rgb(var(--foreground)) !important;
+}
+
+html.light [class*="border-neutral-700"] {
+  border-color: rgb(var(--border) / 0.65) !important;
+}
+
+html.light .shadow-lg {
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.07),
+    0 4px 6px -4px rgb(0 0 0 / 0.05);
+}
+
+html.light .bg-\[\#27272c\] {
+  background-color: rgb(var(--surface)) !important;
+}
+
+/* Project card hover overlays stay white on images */
+html.light .group > .absolute.inset-0.text-white {
+  color: #ffffff !important;
 }
 
 .swiper-pagination-bullet {

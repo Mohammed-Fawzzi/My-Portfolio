@@ -1,9 +1,9 @@
 "use client";
-import { uiData } from "@/constants";
+import { uiData } from "@/app/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
-import { FadeLeft } from "@/constants/animation";
+import { FadeLeft } from "@/app/constants/animation";
 import { motion } from "framer-motion";
 import { FiExternalLink } from "react-icons/fi";
 

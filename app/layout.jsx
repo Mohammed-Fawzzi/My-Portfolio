@@ -1,8 +1,17 @@
-import { ToastContainer } from "react-toastify";
-import Footer from "./(Components)/Footer/Footer";
-import Navbar from "./(Components)/Navbar/Navbar";
+import ClientProviders from "./providers/ClientProviders/ClientProviders";
 import "react-toastify/dist/ReactToastify.css";
 import "./globals.css";
+
+const themeScript = `
+  (function () {
+    try {
+      var t = localStorage.getItem("theme");
+      document.documentElement.classList.add(t === "light" ? "light" : "dark");
+    } catch (e) {
+      document.documentElement.classList.add("dark");
+    }
+  })();
+`;
 
 export const metadata = {
   metadataBase: new URL("https://mohamedfawzzi.site/"),
@@ -48,22 +57,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body className="overflow-x-hidden">
-        <Navbar />
-        {children}
-        <ToastContainer
-          position="top-right"
-          autoClose={2000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="dark"
-        />
-        <Footer />
+        <ClientProviders>{children}</ClientProviders>
       </body>
     </html>
   );
