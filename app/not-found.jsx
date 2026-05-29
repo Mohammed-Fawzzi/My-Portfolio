@@ -57,7 +57,7 @@ export default function NotFound() {
               variants={FadeLeft(1.6)}
               initial="hidden"
               animate="visible"
-              className="flex items-center justify-center bg-accent text-primary font-bold px-6 py-2 rounded hover:bg-accent-dark transition"
+              className="flex items-center justify-center bg-accent text-on-accent font-bold px-6 py-2 rounded hover:bg-accent-dark transition"
             >
               <FaArrowAltCircleLeft className="mr-2" />
               <span>Back To Home</span>

@@ -15,18 +15,34 @@
   --muted-400: 163 163 163;
   --border: 64 64 64;
   --surface: 39 39 44;
+  /* UI: buttons, borders, scrollbar */
+  --accent: 0 255 153;
+  --accent-hover: 0 225 135;
+  /* Text & borders on dark backgrounds */
+  --accent-foreground: 0 255 153;
+  --accent-foreground-hover: 0 225 135;
+  --accent-border: 0 255 153;
+  --accent-border-hover: 0 225 135;
+  --accent-on-solid: 28 28 34;
 }
 
 .light {
-  /* Off-white — light but not pure white */
   --background: 236 238 242;
-  --foreground: 28 28 34;
-  --muted-100: 64 64 64;
-  --muted-200: 82 82 82;
-  --muted-300: 96 96 104;
-  --muted-400: 120 120 128;
+  --foreground: 24 28 36;
+  --muted-100: 52 58 68;
+  --muted-200: 72 78 90;
+  --muted-300: 92 98 110;
+  --muted-400: 118 124 136;
   --border: 200 204 212;
   --surface: 228 230 236;
+  /* Unified accent — text, borders, fills (nav, timeline, buttons, dots) */
+  --accent: 11 110 82;
+  --accent-hover: 8 92 69;
+  --accent-foreground: 11 110 82;
+  --accent-foreground-hover: 8 92 69;
+  --accent-border: 11 110 82;
+  --accent-border-hover: 8 92 69;
+  --accent-on-solid: 255 255 255;
 }
 
 /* General */
@@ -66,9 +82,36 @@
   .bg-primary {
     background-color: rgb(var(--background)) !important;
   }
+
+  /* Accent text follows theme token (not the neon UI color) */
+  .text-accent {
+    color: rgb(var(--accent-foreground));
+  }
+
+  .hover\:text-accent:hover {
+    color: rgb(var(--accent-foreground-hover));
+  }
+
+  /* Accent borders follow foreground in light mode */
+  .border-accent {
+    border-color: rgb(var(--accent-border));
+  }
+
+  .hover\:border-accent:hover {
+    border-color: rgb(var(--accent-border-hover));
+  }
+
+  .stroke-accent {
+    stroke: rgb(var(--accent));
+  }
+
+  /* Text/icons on solid accent backgrounds (buttons, nav pill, timeline cards) */
+  .text-on-accent {
+    color: rgb(var(--accent-on-solid));
+  }
 }
 
-/* Light mode: remap existing utility classes */
+/* Light mode: remap hardcoded utility classes */
 html.light .text-white {
   color: rgb(var(--foreground)) !important;
 }
@@ -93,6 +136,11 @@ html.light .text-neutral-400 {
   color: rgb(var(--muted-400)) !important;
 }
 
+html.light .text-natural-300,
+html.light .text-gray-300 {
+  color: rgb(var(--muted-300)) !important;
+}
+
 html.light .hover\:text-neutral-100:hover {
   color: rgb(var(--foreground)) !important;
 }
@@ -111,9 +159,15 @@ html.light .bg-\[\#27272c\] {
   background-color: rgb(var(--surface)) !important;
 }
 
-/* Project card hover overlays stay white on images */
 html.light .group > .absolute.inset-0.text-white {
   color: #ffffff !important;
+}
+
+/* Filled accent surfaces: white text on dark green in light mode */
+html.light .bg-accent,
+html.light .hover\:bg-accent:hover,
+html.light .hover\:bg-accent-HOVER:hover {
+  color: rgb(var(--accent-on-solid));
 }
 
 .swiper-pagination-bullet {
@@ -122,5 +176,5 @@ html.light .group > .absolute.inset-0.text-white {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #00ff99 !important;
+  background-color: rgb(var(--accent)) !important;
 }

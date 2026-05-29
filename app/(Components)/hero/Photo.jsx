@@ -34,7 +34,7 @@ export default function Photo() {
         </motion.div>
         {/* Circle */}
         <motion.svg
-          className="w-[300px] h-[300px] xl:w-[506px] xl:h-[506px]"
+          className="w-[300px] h-[300px] xl:w-[506px] xl:h-[506px] stroke-accent"
           fill="transparent"
           viewBox="0 0 510 510"
           xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +43,7 @@ export default function Photo() {
             cx="253"
             cy="253"
             r="250"
-            stroke="#00ff99"
+            stroke="currentColor"
             strokeWidth="4"
             strokeLinecap="round"
             strokeLinejoin="round"

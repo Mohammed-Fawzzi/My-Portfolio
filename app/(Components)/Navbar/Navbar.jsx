@@ -69,7 +69,7 @@ export default function Navbar() {
                     )}
 
                     <span
-                      className={`relative z-10 font-bold transition-colors ${isActive ? "text-primary" : "text-white hover:text-accent"
+                      className={`relative z-10 font-bold transition-colors ${isActive ? "text-on-accent" : "text-white hover:text-accent"
                         }`}
                     >
                       {link.label}
@@ -152,7 +152,7 @@ export default function Navbar() {
 
                       <span
                         className={`relative z-10 font-bold ${isActive
-                          ? "text-primary"
+                          ? "text-on-accent"
                           : "text-white hover:text-accent"
                           }`}
                       >

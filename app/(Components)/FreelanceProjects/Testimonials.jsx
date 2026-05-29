@@ -24,13 +24,13 @@ export default function Testimonials() {
           <div className="flex gap-3 sm:gap-5 mb-8">
             <button
               onClick={() => swiperRef.current?.slidePrev()}
-              className="text-primary bg-accent p-2 md:p-3 rounded-full transition hover:bg-accent-HOVER"
+              className="text-on-accent bg-accent p-2 md:p-3 rounded-full transition hover:bg-accent-HOVER"
             >
               <FaArrowLeft />
             </button>
             <button
               onClick={() => swiperRef.current?.slideNext()}
-              className="text-primary bg-accent p-2 md:p-3 rounded-full transition hover:bg-accent-HOVER"
+              className="text-on-accent bg-accent p-2 md:p-3 rounded-full transition hover:bg-accent-HOVER"
             >
               <FaArrowRight />
             </button>

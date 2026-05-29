@@ -42,7 +42,7 @@ export default function Skills() {
                   transition-colors duration-300 
                   ${
                     active === item.key
-                      ? "bg-accent text-primary"
+                      ? "bg-accent text-on-accent"
                       : "text-neutral-400 hover:text-neutral-100"
                   }
                 `}

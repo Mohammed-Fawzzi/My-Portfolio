@@ -31,7 +31,7 @@ export default function Js() {
                 href={project.demo}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-lg font-semibold bg-accent hover:bg-accent-HOVER text-primary p-2 mx-2 flex space-x-1 justify-center items-center rounded-md"
+                className="text-lg font-semibold bg-accent hover:bg-accent-HOVER text-on-accent p-2 mx-2 flex space-x-1 justify-center items-center rounded-md"
               >
                 <span>Live</span> <FiExternalLink />
               </Link>
@@ -39,7 +39,7 @@ export default function Js() {
                 href={project.repo}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-lg font-semibold bg-accent hover:bg-accent-HOVER text-primary p-2 mx-2 flex space-x-1 justify-center items-center rounded-md"
+                className="text-lg font-semibold bg-accent hover:bg-accent-HOVER text-on-accent p-2 mx-2 flex space-x-1 justify-center items-center rounded-md"
               >
                 <span>Code</span> <FaGithub />
               </Link>
@@ -52,7 +52,7 @@ export default function Js() {
               <h2 className="text-xl font-semibold text-accent">
                 {project.title}
               </h2>
-              <p className="text-natural-300 my-5">{project.description}</p>
+              <p className="text-neutral-300 my-5">{project.description}</p>
             </div>
 
             <div className="flex space-x-2 mt-2">

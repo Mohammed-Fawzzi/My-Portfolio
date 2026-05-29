@@ -11,9 +11,10 @@ module.exports = {
       colors: {
         primary: "#1c1c22",
         accent: {
-          DEFAULT: "#00ff99",
-          HOVER: "#00e187",
-        }
+          DEFAULT: "rgb(var(--accent) / <alpha-value>)",
+          HOVER: "rgb(var(--accent-hover) / <alpha-value>)",
+          foreground: "rgb(var(--accent-foreground) / <alpha-value>)",
+        },
       },
       fontFamily: {
         Chakra: ["Chakra Petch", "sans-serif"],
