@@ -104,6 +104,7 @@ export default function Navbar() {
                 initial={{ opacity: 0, x: -100 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: (navItems.length + 1) * 0.1 }}
+                className="overflow-visible"
               >
                 <LocaleSwitcher />
               </motion.li>

@@ -274,7 +274,7 @@
   "localeSwitcher": {
     "label": "Language",
     "en": "English",
-    "ar": "العربية",
+    "ar": "Arabic",
     "switchTo": "Switch to {language}"
   }
 }
