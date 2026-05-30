@@ -19,13 +19,15 @@ export const contactMeta = [
   {
     id: 3,
     icon: <FaPhoneAlt className="text-icons text-accent" />,
-    text: "+201021580334",
-    link: "https://wa.me/201021580334",
+    text: "+966541005479",
+    link: "https://wa.me/966541005479",
+    forceLtr: true,
   },
   {
     id: 4,
     icon: <FaEnvelope className="text-icons text-accent" />,
     text: "moahmedfawzzimohamed@gmail.com",
     link: "mailto:moahmedfawzzimohamed@gmail.com",
+    forceLtr: true,
   },
 ];

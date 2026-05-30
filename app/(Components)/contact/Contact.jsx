@@ -14,10 +14,10 @@ export default function Contact() {
   const locale = useLocale();
   const isRtl = locale === "ar";
 
-  const handleCopy = (text) => {
-    navigator.clipboard.writeText(text);
-    toast.success(tc("copied"));
-  };
+  // const handleCopy = (text) => {
+  //   navigator.clipboard.writeText(text);
+  //   toast.success(tc("copied"));
+  // };
 
   const getDisplayText = (item) => {
     if (item.key) return t(item.key);
@@ -86,10 +86,11 @@ export default function Contact() {
                   </div>
 
                   <span
+                    dir={item.forceLtr ? "ltr" : undefined}
                     onClick={() =>
                       item.link
                         ? window.open(item.link, "_blank")
-                        : handleCopy(getDisplayText(item))
+                        : ""
                     }
                     className="
                       flex-1 text-center

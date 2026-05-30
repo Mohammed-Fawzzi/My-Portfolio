@@ -4,6 +4,7 @@ import { socials } from "@/app/constants";
 import { motion } from "framer-motion";
 import { Link } from "@/i18n/navigation";
 import React from "react";
+import Logo from "@/app/(Components)/Logo/Logo";
 
 export default function Footer() {
   return (
@@ -16,8 +17,7 @@ export default function Footer() {
             transition={{ duration: 0.3 }}
             className="text-4xl font-bold cursor-pointer"
           >
-            MF
-            <span className="inline-block w-2 h-2 bg-accent rounded-lg transform -translate-x-[5px] translate-y-[3px]"></span>
+            <Logo />
           </motion.h1>
 
           <motion.div

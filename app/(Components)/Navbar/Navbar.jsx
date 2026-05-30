@@ -8,6 +8,7 @@ import { Link, usePathname } from "@/i18n/navigation";
 import { useEffect, useRef, useState } from "react";
 import ThemeToggle from "@/app/providers/ThemeProvider/ThemeToggle";
 import LocaleSwitcher from "./LocaleSwitcher";
+import Logo from "@/app/(Components)/Logo/Logo";
 import { useScrollProgress } from "@/app/hooks/useScrollProgress";
 import { useTranslations } from "next-intl";
 
@@ -60,12 +61,11 @@ export default function Navbar() {
                 transition={{ duration: 0.3 }}
                 className="text-4xl font-bold"
               >
-                MF
-                <span className="inline-block w-2 h-2 bg-accent rounded-full transform -translate-x-[5px] translate-y-[3px]" />
+                <Logo />
               </motion.h1>
             </Link>
 
-            <ul className="hidden lg:flex items-center justify-center ms-14 gap-2">
+            <ul className="hidden lg:flex items-center justify-center ms-14 gap-3">
               {navItems.map((link, index) => {
                 const isActive = pathName === link.href;
 
