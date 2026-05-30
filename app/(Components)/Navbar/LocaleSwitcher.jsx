@@ -28,16 +28,18 @@ export default function LocaleSwitcher() {
   const [menuPosition, setMenuPosition] = useState(null);
   const buttonRef = useRef(null);
   const menuRef = useRef(null);
-  const isRtl = locale === "ar";
 
   const updateMenuPosition = useCallback(() => {
     if (!buttonRef.current) return;
     const rect = buttonRef.current.getBoundingClientRect();
+    const width = Math.max(rect.width, 148);
+    let left = rect.left;
+    left = Math.min(left, window.innerWidth - width);
+    left = Math.max(left, 0);
     setMenuPosition({
       top: rect.bottom + 8,
-      left: rect.left,
-      right: window.innerWidth - rect.right,
-      width: Math.max(rect.width, 148),
+      left,
+      width,
     });
   }, []);
 
@@ -106,11 +108,9 @@ export default function LocaleSwitcher() {
         style={{
           position: "fixed",
           top: menuPosition.top,
+          left: menuPosition.left,
           minWidth: menuPosition.width,
           zIndex: 9999,
-          ...(isRtl
-            ? { right: menuPosition.right }
-            : { left: menuPosition.left }),
         }}
         className="m-0 list-none overflow-hidden rounded-lg border border-accent bg-[rgb(var(--background))] shadow-[0_12px_32px_rgb(0_0_0/0.55)]"
       >
