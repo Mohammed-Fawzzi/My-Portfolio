@@ -1,18 +1,6 @@
-export const states = [
-  {
-    num: 2,
-    text: "Years of coding.",
-  },
-  {
-    num: 40,
-    text: "Projects Completing.",
-  },
-  {
-    num: 10,
-    text: "Technologies Mastered.",
-  },
-  {
-    num: 20,
-    text: "Frameworks and Libraries Used.",
-  },
+export const statesMeta = [
+  { num: 3, key: "years" },
+  { num: 40, key: "projects" },
+  { num: 15, key: "technologies" },
+  { num: 20, key: "frameworks" },
 ];

@@ -1,58 +1,63 @@
 "use client";
+
 import { socials } from "@/app/constants";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import React from "react";
 import { FiDownload } from "react-icons/fi";
 import Stats from "./Stats";
 import { motion } from "framer-motion";
 import { FadeRight } from "@/app/constants/animation";
 import Image from "next/image";
-import About from "../about/page";
+import AboutSection from "../about/AboutSection";
+import { useLocale, useTranslations } from "next-intl";
 
 export default function Hero() {
+  const t = useTranslations("hero");
+  const locale = useLocale();
+  const isRtl = locale === "ar";
+
   return (
     <section className="h-full">
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
-          {/* Info */}
-          <div className="text-center xl:text-left order-2 xl:order-none">
+          <div className="text-center xl:text-start order-2 xl:order-none">
             <motion.h1
-              variants={FadeRight(0.9)}
+              variants={FadeRight(0.9, isRtl)}
               initial="hidden"
               animate="visible"
               className="h2 mb-6"
             >
-              Hello, I am <br />
+              {t("greeting")} <br />
               <motion.span
-                variants={FadeRight(1.2)}
+                variants={FadeRight(1.2, isRtl)}
                 initial="hidden"
                 animate="visible"
                 className="text-accent"
               >
-                Mohamed Fawzzi
+                {t("name")}
               </motion.span>
             </motion.h1>
             <motion.p
-              variants={FadeRight(1.6)}
+              variants={FadeRight(1.6, isRtl)}
               initial="hidden"
               animate="visible"
               className="text-neutral-300 max-w-[500px] mb-6"
             >
-              React Developer with 2+ years of experience building web and mobile applications using React.js, Next.js, and React Native. Skilled in converting Figma designs into responsive interfaces, integrating RESTful APIs, and managing state with Redux Toolkit, React Query, and Context API. Passionate about clean code, performance, and user experience.
+              {t("bio")}
             </motion.p>
             <motion.div
-              variants={FadeRight(1.8)}
+              variants={FadeRight(1.8, isRtl)}
               initial="hidden"
               animate="visible"
-              className="flex flex-col items-center md:flex-row md:space-x-4"
+              className="flex flex-col items-center md:flex-row md:gap-4"
             >
               <Link href="/MohamedFawzziCV.pdf" download target="_blank">
                 <button className="font-bold border border-accent text-accent hover:bg-accent-HOVER hover:text-primary py-2 px-5 rounded-full transition-all duration-300 flex items-center justify-center">
-                  <span>Download Cv</span>{" "}
-                  <FiDownload className="ml-2 text-icons" />
+                  <span>{t("downloadCv")}</span>{" "}
+                  <FiDownload className="ms-2 text-icons" />
                 </button>
               </Link>
-              <div className="flex justify-center items-center space-x-4 md:space-x-3 mt-4 md:mt-0">
+              <div className="flex justify-center items-center gap-4 md:gap-3 mt-4 md:mt-0">
                 {socials.map((item) => (
                   <Link
                     href={item.url}
@@ -68,17 +73,22 @@ export default function Hero() {
               </div>
             </motion.div>
           </div>
-          {/* Photo */}
+
           <div className="order-1 xl:order-none mb-12">
-            <Image src={"/avatar.webp"} alt="avatar" className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px]" width={400} height={200} />
+            <Image
+              src={"/avatar.webp"}
+              alt="avatar"
+              className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px]"
+              width={400}
+              height={200}
+            />
           </div>
         </div>
       </div>
-      {/* States */}
+
       <Stats />
 
-      {/* About without skills and services */}
-      <About showExtras={false} />
+      <AboutSection showExtras={false} />
     </section>
   );
 }

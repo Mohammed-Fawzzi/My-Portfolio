@@ -5,16 +5,16 @@ import {
   FaUser,
 } from "react-icons/fa";
 
-export const contactData = [
+export const contactMeta = [
   {
     id: 1,
     icon: <FaUser className="text-icons text-accent" />,
-    text: "Mohamed Fawzzi",
+    key: "name",
   },
   {
     id: 2,
     icon: <FaMapMarkerAlt className="text-icons text-accent" />,
-    text: "Mansoura, Egypt",
+    key: "location",
   },
   {
     id: 3,

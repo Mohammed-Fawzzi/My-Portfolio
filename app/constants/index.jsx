@@ -1,12 +1,12 @@
-export { navItems } from "./navItems";
+export { navMeta as navItems } from "./navItems";
 export { socials } from "./socials";
-export { states } from "./states";
-export { aboutMe } from "./aboutMe";
+export { statesMeta as states } from "./states";
+export { aboutMeMeta as aboutMe } from "./aboutMe";
 export { skillsData } from "./skillsData";
-export { services, servicesData } from "./services";
+export { servicesMeta as servicesData } from "./services";
 export { featuredProjectsData } from "./featuredProjectsData";
-export { reviewsData } from "./reviewsData";
+export { reviewsMeta as reviewsData } from "./reviewsData";
 export { reactNextData } from "./reactNextData";
 export { jsData } from "./jsData";
 export { uiData } from "./uiData";
-export { contactData } from "./contactData";
+export { contactMeta as contactData } from "./contactData";

@@ -1,31 +1,32 @@
 "use client";
+
 import React, { useState } from "react";
 import { skillsData } from "@/app/constants";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export default function Skills() {
+  const t = useTranslations("skills");
   const [active, setActive] = useState("languages");
   const tabSkills = [
-    { key: "languages", label: "Languages & Markup" },
-    { key: "frameworks", label: "Frameworks" },
-    { key: "stateManagement", label: "State Management" },
-    { key: "styling", label: "Styling & Animation" },
-    { key: "api", label: "APIs & Integration" },
-    { key: "testing", label: "Testing" },
-    { key: "tools", label: "Version Control & Tools" },
+    { key: "languages", labelKey: "languages" },
+    { key: "frameworks", labelKey: "frameworks" },
+    { key: "stateManagement", labelKey: "stateManagement" },
+    { key: "styling", labelKey: "styling" },
+    { key: "api", labelKey: "api" },
+    { key: "testing", labelKey: "testing" },
+    { key: "tools", labelKey: "tools" },
   ];
-  
+
   return (
     <section className="py-16 overflow-x-hidden">
       <div className="container">
-        {/* Title */}
         <div className="text-center mb-10">
           <h1 className="text-4xl font-bold">
-            Technical <span className="text-accent">Skills</span>
+            {t("title")} <span className="text-accent">{t("titleAccent")}</span>
           </h1>
         </div>
 
-        {/* Tabs — grid on mobile/tablet, equal flex row on lg+ */}
         <div className="mb-10 w-full overflow-hidden">
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 w-full lg:flex lg:flex-row lg:items-stretch lg:gap-2">
             {tabSkills.map((item) => (
@@ -47,13 +48,14 @@ export default function Skills() {
                   }
                 `}
               >
-                <span className="block max-w-full font-bold">{item.label}</span>
+                <span className="block max-w-full font-bold">
+                  {t(`tabs.${item.labelKey}`)}
+                </span>
               </button>
             ))}
           </div>
         </div>
 
-        {/* Cards */}
         <AnimatePresence mode="wait">
           <motion.div
             key={active}

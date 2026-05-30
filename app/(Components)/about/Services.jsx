@@ -1,22 +1,25 @@
 "use client";
+
 import React from "react";
 import { servicesData } from "@/app/constants";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export default function Services() {
+  const t = useTranslations("services");
+
   return (
     <section className="py-8">
       <div className="container">
-        {/* Title */}
         <div className="text-center">
           <h1 className="text-4xl font-bold">
-            How can I <span className="text-accent">help?</span>
+            {t("title")}{" "}
+            <span className="text-accent">{t("titleAccent")}</span>
           </h1>
         </div>
       </div>
 
-      {/* Services */}
       <div className="container my-10 overflow-hidden">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 items-stretch">
           {servicesData.map((service, index) => (
@@ -39,17 +42,17 @@ export default function Services() {
                   src={service.icon}
                   width={50}
                   height={50}
-                  alt={service.title}
+                  alt={t(`items.${service.id}.title`)}
                   className="object-contain"
                 />
               </div>
 
               <p className="text-xl font-bold text-center">
-                {service.title}
+                {t(`items.${service.id}.title`)}
               </p>
 
               <p className="text-sm font-medium text-neutral-300 text-center leading-relaxed">
-                {service.description}
+                {t(`items.${service.id}.description`)}
               </p>
             </motion.div>
           ))}

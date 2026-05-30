@@ -1,7 +1,8 @@
 "use client";
+
 import { socials } from "@/app/constants";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import React from "react";
 
 export default function Footer() {
@@ -9,7 +10,6 @@ export default function Footer() {
     <footer className="border-t border-neutral-700/80 py-4">
       <div className="container mx-auto relative lg:text-sm md:px-1">
         <Link href="/" className="flex items-center justify-between">
-          {/* Logo */}
           <motion.h1
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -17,15 +17,14 @@ export default function Footer() {
             className="text-4xl font-bold cursor-pointer"
           >
             MF
-            <span className="inline-block w-2 h-2 bg-accent rounded-lg transform translate-x-[-5px] translate-y-[3px]"></span>
+            <span className="inline-block w-2 h-2 bg-accent rounded-lg transform -translate-x-[5px] translate-y-[3px]"></span>
           </motion.h1>
 
-          {/* Social Icons */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3 }}
-            className="flex items-center space-x-4"
+            className="flex items-center gap-4"
           >
             {socials.map((item) => (
               <Link
@@ -34,7 +33,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 key={item.id}
               >
-                <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 border border-accent text-accent hover:bg-accent-HOVER hover:text-primary rounded-lg transition-all duration-500 text-icons">
+                <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 border border-accent text-accent hover:bg-accent-HOVER hover:text-primary rounded-3xl transition-all duration-500 text-icons">
                   {item.icon}
                 </div>
               </Link>

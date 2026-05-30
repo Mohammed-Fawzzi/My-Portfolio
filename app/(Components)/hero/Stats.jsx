@@ -1,9 +1,13 @@
 "use client";
+
 import { states } from "@/app/constants";
 import React from "react";
 import CountUp from "react-countup";
+import { useTranslations } from "next-intl";
 
 export default function Stats() {
+  const t = useTranslations("stats");
+
   return (
     <section className="pt-4 pb-12 mb-10 xl:pt-0 xl:pb-0">
       <div className="container mx-auto overflow-hidden">
@@ -22,10 +26,10 @@ export default function Stats() {
               />
               <p
                 className={`${
-                  state.text.length < 15 ? "max-w-[100px]" : "max-w-[150px]"
+                  t(state.key).length < 15 ? "max-w-[100px]" : "max-w-[150px]"
                 } leading-tight text-white/80`}
               >
-                {state.text}
+                {t(state.key)}
               </p>
             </div>
           ))}

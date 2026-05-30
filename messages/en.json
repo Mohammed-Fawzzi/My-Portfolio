@@ -1,0 +1,280 @@
+{
+  "metadata": {
+    "title": "Mohamed Fawzzi | Front-End Developer",
+    "titleTemplate": "%s | Mohamed Fawzzi",
+    "description": "Mohamed Fawzzi is a Front-End Developer specialized in React, Next.js, and modern web technologies.",
+    "ogDescription": "Portfolio of Mohamed Fawzzi - React & Next.js Developer building modern web applications.",
+    "siteName": "Mohamed Fawzzi Portfolio",
+    "twitterDescription": "Front-End Developer specialized in React and Next.js."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "projects": "Projects",
+    "contact": "Contact Us",
+    "toggleMenu": "Toggle menu",
+    "scrollProgress": "Scroll progress"
+  },
+  "hero": {
+    "greeting": "Hello, I am",
+    "name": "Mohamed Fawzzi",
+    "bio": "React Developer with 2+ years of experience building web and mobile applications using React.js, Next.js, and React Native. Skilled in converting Figma designs into responsive interfaces, integrating RESTful APIs, and managing state with Redux Toolkit, React Query, and Context API. Passionate about clean code, performance, and user experience.",
+    "downloadCv": "Download Cv"
+  },
+  "stats": {
+    "years": "Years of experience.",
+    "projects": "Projects Completing.",
+    "technologies": "Technologies & Tools Used.",
+    "frameworks": "Frameworks and Libraries Used."
+  },
+  "about": {
+    "title": "About",
+    "titleAccent": "Me",
+    "items": {
+      "education": {
+        "title": "Education",
+        "desc": "Bachelor's degree in Computer Science with a strong foundation in software development and modern web technologies."
+      },
+      "experience": {
+        "title": "Professional Experience",
+        "desc": "Front-End Developer at Petra Project Management (Remote), where I developed and maintained scalable front-end applications using React, with exposure to Next.js, while collaborating with project managers."
+      },
+      "internship": {
+        "title": "Internship",
+        "desc": "Front-End Developer Intern at Dr Code, focused on building responsive web interfaces using HTML, CSS, JavaScript, and React, and integrating RESTful APIs while working closely with UI/UX designers."
+      },
+      "freelancing": {
+        "title": "Freelancing",
+        "desc": "Freelance Front-End Developer working on projects across education, e-commerce, marketing, and trading platforms, delivering responsive, SEO-friendly web applications with a strong focus on performance, accessibility, and modern UI/UX."
+      }
+    }
+  },
+  "skills": {
+    "title": "Technical",
+    "titleAccent": "Skills",
+    "tabs": {
+      "languages": "Languages & Markup",
+      "frameworks": "Frameworks",
+      "stateManagement": "State Management",
+      "styling": "Styling & Animation",
+      "api": "APIs & Integration",
+      "testing": "Testing",
+      "tools": "Version Control & Tools"
+    }
+  },
+  "services": {
+    "title": "How can I",
+    "titleAccent": "help?",
+    "items": {
+      "1": {
+        "title": "Web Applications",
+        "description": "I build custom web applications for businesses and individuals using modern frameworks like React and Next.js, focusing on performance, scalability, and real-world needs."
+      },
+      "2": {
+        "title": "Android & iOS Applications",
+        "description": "I build modern mobile applications for Android and iOS with smooth performance and user-friendly interfaces."
+      },
+      "3": {
+        "title": "API Integration",
+        "description": "I integrate external APIs and back-end services to create secure, dynamic, and data-driven applications that work seamlessly."
+      },
+      "4": {
+        "title": "User Interfaces",
+        "description": "I design and develop engaging front-end interfaces that are intuitive, responsive, accessible, and aligned with your brand identity."
+      },
+      "5": {
+        "title": "Speed Optimization",
+        "description": "I optimize performance, reduce load times, and apply best practices to make your site faster, more efficient, and user-friendly."
+      },
+      "6": {
+        "title": "Website Management",
+        "description": "I build custom web applications using React and Next.js with a strong focus on performance, scalability, and SEO best practices."
+      }
+    }
+  },
+  "freelance": {
+    "title": "Freelance",
+    "titleAccent": "Projects",
+    "items": {
+      "1": {
+        "title": "Ma3aak – Teacher Marketing Platform",
+        "description": "Built and maintained the frontend of a multi-service teacher marketplace using Next.js. Integrated PayPal payment flows including checkout and transaction status handling. Implemented advanced search and filtering for services and listings. Developed an Admin Dashboard using React to manage platform content and operations."
+      },
+      "2": {
+        "title": "Clickat Ads – Marketing & Advertising Platform",
+        "description": "Developed a multi-language marketing and advertising platform with dark and light modes. Integrated PayPal and direct payment links for advertising campaign requests. Built service modules for website creation and social media account management."
+      },
+      "4": {
+        "title": "Dababat – Motorcycle Marketplace Platform",
+        "description": "Developed a motorcycle marketplace platform supporting user authentication, ad and service management, and real-time chat between users. Implemented Google login, role-based access control, and an Admin Dashboard for managing users, ads, and analytics."
+      },
+      "6": {
+        "title": "Special Home Care – Home Healthcare Platform",
+        "description": "Developed a platform for requesting home nursing and healthcare services with ease. Users can book services directly from their phones and receive professional healthcare support at home with safety and convenience in mind."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "What",
+    "titleAccent": "Clients Say",
+    "client": "Client",
+    "items": {
+      "1": {
+        "name": "Noura S.",
+        "text": "I really enjoyed working with Mohamed. He was fast, professional, and very cooperative throughout every stage of the project. The quality of work was excellent, and I look forward to working with him again on future projects."
+      },
+      "2": {
+        "name": "Ahmed E.",
+        "text": "I would like to sincerely thank Mohamed for the outstanding service. He was highly professional, quick to deliver, and the quality of work exceeded my expectations. I strongly recommend working with him, and this definitely won't be our last collaboration."
+      },
+      "3": {
+        "name": "Anas Z.",
+        "text": "One of the best web developers I've worked with! Exceptional design skills, excellent communication, and fast delivery. The final result was a high-performance website that exceeded all expectations."
+      },
+      "4": {
+        "name": "Islam M.",
+        "text": "A dedicated and highly skilled developer. I strongly recommend working with him. I suggest discussing project details beforehand, as his experience and insights add great value to any project."
+      },
+      "5": {
+        "name": "Mohammed E.",
+        "text": "Mohamed delivered the project with outstanding quality and great attention to detail. He was extremely fast with delivery and very professional in communication. I highly recommend working with him, and I'm sure this won't be our last collaboration."
+      }
+    }
+  },
+  "projects": {
+    "title": "My",
+    "titleAccent": "Projects",
+    "reactNext": {
+      "title": "React and Next Js",
+      "subtitle": "projects",
+      "items": {
+        "1": {
+          "title": "SHOPIQ [ E-commerce ]",
+          "description": "SHOPIQ: is a comprehensive e-commerce platform that allows you to browse products, search for any item, and register accounts. The site uses a (real API), This application provides a professional and user-friendly interface."
+        },
+        "2": {
+          "title": "Streamo",
+          "description": "Streamo: is a comprehensive movie site that allows you to watch movies and TV shows, search for any film or series, and register accounts. The site uses the (TMDB API), This application provides a professional and user-friendly interface."
+        },
+        "3": {
+          "title": "AdminPanelX",
+          "description": "AdminPanelX:  is a dynamic admin dashboard designed to efficiently manage data and monitor various metrics. This application provides a professional and user-friendly interface with the ability to switch between Dark and Light modes."
+        },
+        "4": {
+          "title": "Digital Marketing",
+          "description": "Digital Marketing: is a web application designed to help you explore effective digital marketing strategies and tools. This app provides a seamless and professionally designed user interface to ensure an exceptional user experience."
+        },
+        "5": {
+          "title": "Head Phones",
+          "description": "Head Phones: is a web application designed to help you explore and choose the right headphones. This app provides an exceptional user experience with a professionally designed interface to ensure an exceptional user experience."
+        },
+        "6": {
+          "title": "VirtualR",
+          "description": "VirtualR: is a comprehensive platform that allows you to design virtual reality applications with ease and professionalism. The system features a user-friendly interface with a variety of tools and features."
+        },
+        "7": {
+          "title": "Bookify",
+          "description": "Bookify:  is a comprehensive site that allows you to explore a wide variety of books, search for any title, and view detailed information about each book. The site uses (The New York Times API)."
+        },
+        "8": {
+          "title": "Fast Food TNC",
+          "description": "Fast Food TNC: is a comprehensive food site that allows you to explore a wide variety of fast food meals, search for any dish, and view detailed recipes and ingredients. The site uses (TheMealDB API)."
+        }
+      }
+    },
+    "js": {
+      "title": "Javascript",
+      "subtitle": "projects",
+      "items": {
+        "1": {
+          "title": "Product Management System [ CRUDS ]",
+          "description": "Product Management System: a web application designed to make managing products easy and efficient. This CRUD app (Create, Read, Update, Delete) allows you to seamlessly add, update, delete, and search for products."
+        },
+        "2": {
+          "title": "ToDo List",
+          "description": "ToDo List: a web application designed to make managing your tasks easy and efficient. This application allows you to seamlessly add and delete tasks with sweetalert, ensuring that you stay organized and productive."
+        },
+        "3": {
+          "title": "Quotes of the Day",
+          "description": "Quotes of the Day: a web application designed to brighten your day with inspiring quotes. Fetching random quotes from the (QuotableAPI), this app lets you enjoy and share motivational wisdom effortlessly. "
+        },
+        "4": {
+          "title": "Weather App",
+          "description": "Weather App: a web application designed to keep you informed about the latest weather conditions. Fetching data from the (WeatherAPI), this app lets you easily search for and view the weather forecast for any city or country for the next three days."
+        },
+        "5": {
+          "title": "Game Reviews",
+          "description": "Game Reviews: a web application designed to help you explore and discover free-to-play games using the (Free-to-Play Games Database API). and with Modules js and Object Oriented programming."
+        },
+        "6": {
+          "title": "Egyptian Party",
+          "description": "Egyptian Party: a web application for an upcoming Egyptian party event. The website includes a side menu, a countdown feature for the event date, and a responsive design. It is built using HTML, CSS, Bootstrap, JavaScript, and jQuery."
+        },
+        "7": {
+          "title": "Quiz Master",
+          "description": "Quiz Master: Quiz Master is a web application designed to test your knowledge with a variety of trivia questions. It uses the Open (Trivia Database API) to provide engaging and interactive quizzes, and with Modules js and Object Oriented programming.."
+        },
+        "8": {
+          "title": "Yummy",
+          "description": "Yummy: This is a simple recipe app designed to help you discover delicious recipes from various cuisines. Using (TheMealDB API), you can search for recipes, view details, and find inspiration for your next meal, and with Modules js and OOP."
+        }
+      }
+    },
+    "ui": {
+      "title": "UI",
+      "subtitle": "projects",
+      "items": {
+        "1": {
+          "title": "Tawkeele – Multi-language Umrah Platform",
+          "description": "A multi-language website that enables users to perform Umrah or Hajj on behalf of their loved ones through authorized individuals."
+        },
+        "2": {
+          "title": "Hostit",
+          "description": "Hostit:  Our platform offers user-friendly interfaces and robust hosting capabilities to ensure your websites run smoothly and efficiently."
+        },
+        "3": {
+          "title": "Mealify",
+          "description": "Mealify :  is a restaurant website , featuring user-friendly interfaces, a dark mode, and robust navigation capabilities to ensure your browsing experience is smooth and enjoyable."
+        },
+        "4": {
+          "title": "DevFolio",
+          "description": "DevFolio: a portfolio website that showcases the talents and projects of a full stack developer named Morgan Freeman. With a clean and user-friendly interface."
+        }
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "titleAccent": "Me",
+    "talkTitle": "Lets",
+    "talkAccent": "Talk!",
+    "description": "Feel free to reach out through any means, I am always ready to connect and work together.",
+    "name": "Mohamed Fawzzi",
+    "location": "Mansoura, Egypt"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Oops! Page Not Found",
+    "description": "It seems the page you are looking for does not exist. If you typed the URL, please check for any errors.",
+    "hint": "You can go back home or explore other sections of my portfolio.",
+    "backHome": "Back To Home",
+    "needHelp": "If you need assistance, feel free to",
+    "contactMe": "contact me"
+  },
+  "common": {
+    "live": "Live",
+    "code": "Code",
+    "client": "Client",
+    "copied": "Copied!"
+  },
+  "theme": {
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode"
+  },
+  "localeSwitcher": {
+    "label": "Language",
+    "en": "English",
+    "ar": "العربية",
+    "switchTo": "Switch to {language}"
+  }
+}

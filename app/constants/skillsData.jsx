@@ -60,8 +60,9 @@ export const skillsData = {
   // APIs & Integration
   api: [
     { id: 16, title: "RESTful APIs", icon: <SiPostman /> },
+    { id: 17, title: "WebSocket (Socket.io)", icon: <SiSocketdotio /> },
     {
-      id: 17,
+      id: 18,
       title: "ApiDog",
       icon: (
         <Image
@@ -73,7 +74,6 @@ export const skillsData = {
         />
       ),
     },
-    { id: 18, title: "WebSocket (Socket.io)", icon: <SiSocketdotio /> },
     { id: 19, title: "Postman", icon: <SiPostman /> },
   ],
 

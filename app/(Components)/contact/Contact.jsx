@@ -1,20 +1,37 @@
 "use client";
+
 import React from "react";
 import { motion } from "framer-motion";
 import { FadeLeft, FadeRight, FadeUp } from "@/app/constants/animation";
 import { contactData } from "@/app/constants";
 import Image from "next/image";
+import { useLocale, useTranslations } from "next-intl";
+import { toast } from "react-toastify";
 
 export default function Contact() {
+  const t = useTranslations("contact");
+  const tc = useTranslations("common");
+  const locale = useLocale();
+  const isRtl = locale === "ar";
+
+  const handleCopy = (text) => {
+    navigator.clipboard.writeText(text);
+    toast.success(tc("copied"));
+  };
+
+  const getDisplayText = (item) => {
+    if (item.key) return t(item.key);
+    return item.text;
+  };
+
   return (
     <section className="h-full">
       <div className="container mx-auto py-8 overflow-hidden px-4">
         <div className="h2 text-center mb-10">
-          Contact <span className="text-accent">Me</span>
+          {t("title")} <span className="text-accent">{t("titleAccent")}</span>
         </div>
 
         <div className="flex flex-col xl:flex-row items-center justify-between gap-14">
-          {/* Image */}
           <div className="w-full xl:w-1/2 flex justify-center">
             <Image
               src="/avatar.webp"
@@ -26,14 +43,13 @@ export default function Contact() {
             />
           </div>
 
-          {/* Content */}
           <div className="flex flex-col space-y-7 mb-4 rounded-lg p-4 w-full xl:w-1/2">
             <div className="space-y-2">
               <motion.div
-                variants={FadeRight(0.3)}
+                variants={FadeRight(0.3, isRtl)}
                 initial="hidden"
                 animate="visible"
-                className="border-l-4 border-accent p-3 rounded-lg shadow-lg"
+                className="border-s-4 border-accent p-3 rounded-lg shadow-lg"
               >
                 <motion.h1
                   variants={FadeUp(0.3)}
@@ -41,7 +57,8 @@ export default function Contact() {
                   animate="visible"
                   className="text-3xl font-bold"
                 >
-                  Lets <span className="text-accent">Talk!</span>
+                  {t("talkTitle")}{" "}
+                  <span className="text-accent">{t("talkAccent")}</span>
                 </motion.h1>
               </motion.div>
 
@@ -51,15 +68,14 @@ export default function Contact() {
                 animate="visible"
                 className="text-neutral-300"
               >
-                Feel free to reach out through any means, I am always ready to
-                connect and work together.
+                {t("description")}
               </motion.p>
             </div>
 
             {contactData.map((item) => (
               <motion.div
                 key={item.id}
-                variants={FadeLeft(0.9 + item.id * 0.3)}
+                variants={FadeLeft(0.9 + item.id * 0.3, isRtl)}
                 initial="hidden"
                 animate="visible"
                 className="flex items-center w-full gap-3"
@@ -73,7 +89,7 @@ export default function Contact() {
                     onClick={() =>
                       item.link
                         ? window.open(item.link, "_blank")
-                        : handleCopy(item.text)
+                        : handleCopy(getDisplayText(item))
                     }
                     className="
                       flex-1 text-center
@@ -86,13 +102,12 @@ export default function Contact() {
                       p-[16px] w-fit
                     "
                   >
-                    {item.text}
+                    {getDisplayText(item)}
                   </span>
                 </div>
               </motion.div>
             ))}
           </div>
-
         </div>
       </div>
     </section>

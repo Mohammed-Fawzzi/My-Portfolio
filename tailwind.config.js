@@ -18,6 +18,7 @@ module.exports = {
       },
       fontFamily: {
         Chakra: ["Chakra Petch", "sans-serif"],
+        arabic: ["Cairo", "Chakra Petch", "sans-serif"],
         varela: ["Varela Round", "sans-serif"],
         roboto: ['Roboto', 'sans-serif'],
       },
