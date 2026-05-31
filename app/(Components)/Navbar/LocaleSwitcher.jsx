@@ -161,7 +161,7 @@ export default function LocaleSwitcher() {
         className="group flex items-center justify-center gap-1 h-8 md:h-9 min-w-[2rem] md:min-w-0 px-2.5 md:px-3 rounded-full border border-accent text-accent hover:bg-accent hover:text-primary transition-all duration-300"
       >
         <span
-          className={`hidden sm:inline text-xs md:text-sm font-bold whitespace-nowrap ${
+          className={`text-xs md:text-sm font-bold whitespace-nowrap ${
             locale === "ar" ? "font-arabic" : "font-latin"
           }`}
         >
