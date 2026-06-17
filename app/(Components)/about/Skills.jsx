@@ -35,7 +35,7 @@ export default function Skills() {
                 onClick={() => setActive(item.key)}
                 className={`
                   w-full lg:flex-1 lg:min-w-0
-                  min-h-[44px] lg:min-h-[52px]
+                  min-h-[35px] lg:min-h-[40px]
                   flex items-center justify-center
                   rounded-md text-center leading-snug
                   text-[11px] sm:text-xs lg:text-[11.2px] 
