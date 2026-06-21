@@ -20,4 +20,4 @@ Portfolio Website is a personal web application designed to showcase your person
 
 ## Live Demo
 
-Check out the live demo [here](https://mohamedfawzzi.vercel.app/).
+Check out the live demo [here](https://www.mohamedfawzzi.site/en). | [here](https://mohamedfawzzi.vercel.app/en).
