@@ -1,5 +1,9 @@
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server";
 import { notFound } from "next/navigation";
 import ClientProviders from "@/app/providers/ClientProviders/ClientProviders";
 import LocaleHtmlAttributes from "@/app/providers/LocaleHtmlAttributes/LocaleHtmlAttributes";
@@ -46,7 +50,9 @@ export async function generateMetadata({ params: { locale } }) {
       siteName: t("siteName"),
       locale: locale === "ar" ? "ar_EG" : "en_US",
       type: "website",
-      images: [{ url: "/icon.jpg", width: 1200, height: 630, alt: t("siteName") }],
+      images: [
+        { url: "/icon.jpg", width: 1200, height: 630, alt: t("siteName") },
+      ],
     },
     twitter: {
       card: "summary_large_image",
