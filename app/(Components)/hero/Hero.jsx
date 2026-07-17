@@ -51,12 +51,17 @@ export default function Hero() {
               animate="visible"
               className="flex flex-col items-center md:flex-row md:gap-4"
             >
-              <Link href="/MohamedFawzziCV.pdf" download target="_blank">
+              <a
+                href="/MohamedFawzziCV.pdf"
+                download="MohamedFawzziCV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <button className="font-bold border border-accent text-accent hover:bg-accent-HOVER hover:text-primary py-2 px-5 rounded-full transition-all duration-300 flex items-center justify-center">
                   <span>{t("downloadCv")}</span>{" "}
                   <FiDownload className="ms-2 text-icons" />
                 </button>
-              </Link>
+              </a>
               <div className="flex justify-center items-center gap-4 md:gap-3 mt-4 md:mt-0">
                 {socials.map((item) => (
                   <Link
