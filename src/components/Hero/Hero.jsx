@@ -57,11 +57,10 @@ export default function Hero() {
                 download="MohamedFawzziCV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="font-bold border border-accent text-accent hover:bg-accent-HOVER hover:text-primary py-2 px-5 rounded-full transition-all duration-300 flex items-center justify-center"
               >
-                <button className="font-bold border border-accent text-accent hover:bg-accent-HOVER hover:text-primary py-2 px-5 rounded-full transition-all duration-300 flex items-center justify-center">
-                  <span>{t("downloadCv")}</span>{" "}
-                  <FiDownload className="ms-2 text-icons" />
-                </button>
+                <span>{t("downloadCv")}</span>{" "}
+                <FiDownload className="ms-2 text-icons" />
               </a>
               <div className="flex justify-center items-center gap-4 md:gap-3 mt-4 md:mt-0">
                 {socials.map((item) => (
@@ -70,10 +69,9 @@ export default function Hero() {
                     target="_blank"
                     rel="noopener noreferrer"
                     key={item.id}
+                    className="flex items-center justify-center w-12 h-12 border border-accent text-accent hover:bg-accent-HOVER hover:text-primary rounded-full transition-all duration-300 text-icons mb-8 xl:mb-0"
                   >
-                    <div className="flex items-center justify-center w-12 h-12 border border-accent text-accent hover:bg-accent-HOVER hover:text-primary rounded-full transition-all duration-300 text-icons mb-8 xl:mb-0">
-                      {item.icon}
-                    </div>
+                    {item.icon}
                   </Link>
                 ))}
               </div>

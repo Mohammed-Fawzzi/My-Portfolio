@@ -10,15 +10,17 @@ export default function Footer() {
   return (
     <footer className="border-t border-neutral-700/80 py-4">
       <div className="container mx-auto relative lg:text-sm md:px-1">
-        <Link href="/" className="flex items-center justify-between">
-          <motion.h1
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.3 }}
-            className="text-4xl font-bold cursor-pointer"
-          >
-            <Logo />
-          </motion.h1>
+        <div className="flex items-center justify-between">
+          <Link href="/" className="inline-flex">
+            <motion.span
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.3 }}
+              className="text-4xl font-bold cursor-pointer"
+            >
+              <Logo />
+            </motion.span>
+          </Link>
 
           <motion.div
             initial={{ opacity: 0, x: 50 }}
@@ -32,14 +34,13 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 key={item.id}
+                className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 border border-accent text-accent hover:bg-accent-HOVER hover:text-primary rounded-3xl transition-all duration-500 text-icons"
               >
-                <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 border border-accent text-accent hover:bg-accent-HOVER hover:text-primary rounded-3xl transition-all duration-500 text-icons">
-                  {item.icon}
-                </div>
+                {item.icon}
               </Link>
             ))}
           </motion.div>
-        </Link>
+        </div>
       </div>
     </footer>
   );
