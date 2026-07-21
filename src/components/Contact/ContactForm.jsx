@@ -31,7 +31,7 @@ function FormField({
       >
         <span>{label}</span>
         {required && (
-          <span className="text-red-400" aria-hidden="true">
+          <span className="text-red-400 text-lg" aria-hidden="true">
             *
           </span>
         )}
@@ -206,7 +206,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={isPending}
-          className="inline-flex items-center justify-center gap-2 rounded-lg border border-accent py-2 px-4 text-sm font-bold text-accent transition-colors duration-300 hover:bg-accent-HOVER hover:text-primary disabled:cursor-not-allowed disabled:opacity-60"
+          className="inline-flex items-center justify-center gap-2 rounded-lg bg-accent py-2 px-4 text-sm font-bold text-primary transition-colors duration-300 hover:bg-accent-HOVER disabled:cursor-not-allowed disabled:opacity-60"
         >
           <span>{isPending ? t("sending") : t("submit")}</span>
           <FiSend className="text-icons" />
