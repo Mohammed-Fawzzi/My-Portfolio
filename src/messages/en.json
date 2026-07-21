@@ -18,7 +18,7 @@
   "hero": {
     "greeting": "Hello, I am",
     "name": "Mohamed Fawzzi",
-    "bio": "React Developer with 2+ years of experience building web and mobile applications using React.js, Next.js, and React Native. Skilled in converting Figma designs into responsive interfaces, integrating RESTful APIs, and managing state with Redux Toolkit, React Query, and Context API. Passionate about clean code, performance, and user experience.",
+    "bio": "React Developer with 3+ years of experience building web and mobile applications using React.js, Next.js, and React Native. Skilled in converting Figma designs into responsive interfaces, integrating RESTful APIs, and managing state with Redux Toolkit, React Query, and Context API. Passionate about clean code, performance, and user experience.",
     "downloadCv": "Download Cv"
   },
   "stats": {

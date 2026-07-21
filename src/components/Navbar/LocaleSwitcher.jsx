@@ -15,7 +15,7 @@ import { routing } from "@/i18n/routing";
 
 const localeShort = {
   en: "EN",
-  ar: "ع",
+  ar: "AR",
 };
 
 export default function LocaleSwitcher() {
@@ -33,7 +33,7 @@ export default function LocaleSwitcher() {
     if (!buttonRef.current) return;
     const rect = buttonRef.current.getBoundingClientRect();
     const width = Math.max(rect.width, 148);
-    let left = rect.left;
+    let left = rect.left - 8;
     left = Math.min(left, window.innerWidth - width);
     left = Math.max(left, 0);
     setMenuPosition({
@@ -158,7 +158,7 @@ export default function LocaleSwitcher() {
         aria-expanded={isOpen}
         aria-haspopup="listbox"
         title={t("switchTo", { language: t(locale) })}
-        className="group inline-flex shrink-0 grow-0 items-center justify-center gap-1 h-9 min-h-9 max-h-9 min-w-9 px-3 leading-none rounded-full border border-accent text-accent hover:bg-accent hover:text-primary transition-all duration-300"
+        className="group inline-flex shrink-0 grow-0 items-center justify-center gap-1 h-9 min-h-9 max-h-9 min-w-9 ps-3 pe-1.5 leading-none rounded-full border border-accent text-accent hover:bg-accent hover:text-primary transition-all duration-300"
       >
         <span
           className={`text-sm font-bold whitespace-nowrap leading-none ${

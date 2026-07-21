@@ -18,7 +18,7 @@
   "hero": {
     "greeting": "مرحباً، أنا",
     "name": "محمد فوزي",
-    "bio": "مطور React بخبرة تزيد عن سنتين في بناء تطبيقات الويب والموبايل باستخدام React.js و Next.js و React Native. ماهر في تحويل تصاميم Figma إلى واجهات متجاوبة، ودمج RESTful APIs، وإدارة الحالة باستخدام Redux Toolkit و React Query و Context API. شغوف بالكود النظيف والأداء وتجربة المستخدم.",
+    "bio": "مطور React بخبرة تزيد عن ثلاث سنوات في بناء تطبيقات الويب والموبايل باستخدام React.js و Next.js و React Native. ماهر في تحويل تصاميم Figma إلى واجهات متجاوبة، ودمج RESTful APIs، وإدارة الحالة باستخدام Redux Toolkit و React Query و Context API. شغوف بالكود النظيف والأداء وتجربة المستخدم.",
     "downloadCv": "تحميل السيرة الذاتية"
   },
   "stats": {
