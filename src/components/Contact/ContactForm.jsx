@@ -69,7 +69,10 @@ export default function ContactForm() {
 
   const showSubmitErrorToast = useCallback(() => {
     toast.error(
-      <div className="space-y-3 text-sm leading-relaxed pe-2">
+      <div
+        dir={isRtl ? "rtl" : "ltr"}
+        className="space-y-3 text-sm leading-relaxed"
+      >
         <p>{t("error")}</p>
         <a
           href={WHATSAPP_LINK}
@@ -83,7 +86,7 @@ export default function ContactForm() {
       </div>,
       { autoClose: 8000 }
     );
-  }, [t]);
+  }, [t, isRtl]);
 
   const schema = useMemo(
     () => createContactSchema((key) => t(key)),

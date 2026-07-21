@@ -84,7 +84,7 @@ export default function ContactSuccessModal({ isOpen, onClose }) {
               <Link
                 href="/projects"
                 onClick={onClose}
-                className="rounded-full border border-accent px-6 py-2.5 font-bold text-accent transition-all duration-300 hover:bg-accent-HOVER hover:text-primary"
+                className="rounded-none border border-accent px-6 py-2.5 font-bold text-accent transition-all duration-300 hover:bg-accent-HOVER hover:text-primary"
               >
                 {t("browseProjects")}
               </Link>

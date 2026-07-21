@@ -75,11 +75,22 @@ export function formatSentAt(locale, date = new Date()) {
   }).format(date);
 }
 
-function fieldRow(label, value, { isRtl, isLink } = {}) {
+function toWhatsAppLink(phone) {
+  const digits = String(phone).replace(/\D/g, "");
+  if (!digits) return null;
+  return `https://wa.me/${digits}`;
+}
+
+function fieldRow(label, value, { isRtl, isLink, forceLtr } = {}) {
   const align = isRtl ? "right" : "left";
+  const directionStyle = forceLtr
+    ? "direction:ltr;unicode-bidi:isolate;text-align:left;"
+    : "";
   const safeValue = isLink
-    ? `<a href="${value.href}" style="color:${COLORS.link};text-decoration:none;">${value.label}</a>`
-    : escapeHtml(value);
+    ? `<a href="${value.href}" target="_blank" rel="noopener noreferrer" style="color:${COLORS.link};text-decoration:none;${directionStyle}">${value.label}</a>`
+    : forceLtr
+      ? `<span style="${directionStyle}">${escapeHtml(value)}</span>`
+      : escapeHtml(value);
 
   return `
     <tr>
@@ -87,7 +98,7 @@ function fieldRow(label, value, { isRtl, isLink } = {}) {
         <div style="font-size:13px;font-weight:700;color:${COLORS.accent};margin:0 0 6px;">
           ${escapeHtml(label)}
         </div>
-        <div style="font-size:15px;line-height:1.6;color:${COLORS.text};word-break:break-word;">
+        <div style="font-size:15px;line-height:1.6;color:${COLORS.text};word-break:break-word;${forceLtr && !isLink ? directionStyle : ""}">
           ${safeValue}
         </div>
       </td>
@@ -118,6 +129,18 @@ export function buildContactNotificationEmail({
   const domain = siteUrl.replace(/^https?:\/\//, "");
   const mailto = `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent(`Re: ${subjectLabel}`)}`;
   const replyLabel = `${t.reply} ${name}`;
+  const phoneDisplay = phone ? escapeHtml(phone) : escapeHtml(t.noPhone);
+  const whatsappLink = phone ? toWhatsAppLink(phone) : null;
+  const phoneField = whatsappLink
+    ? fieldRow(
+        t.phone,
+        {
+          href: whatsappLink,
+          label: phoneDisplay,
+        },
+        { isRtl, isLink: true, forceLtr: true }
+      )
+    : fieldRow(t.phone, phone || t.noPhone, { isRtl, forceLtr: Boolean(phone) });
 
   return `
 <!DOCTYPE html>
@@ -177,9 +200,9 @@ export function buildContactNotificationEmail({
                       href: `mailto:${encodeURIComponent(email)}`,
                       label: safeEmail,
                     },
-                    { isRtl, isLink: true }
+                    { isRtl, isLink: true, forceLtr: true }
                   )}
-                  ${fieldRow(t.phone, phone || t.noPhone, { isRtl })}
+                  ${phoneField}
                 </table>
               </td>
             </tr>
@@ -197,7 +220,7 @@ export function buildContactNotificationEmail({
 
             <tr>
               <td style="padding:24px 28px;text-align:center;">
-                <a href="${mailto}" style="display:inline-block;background:${COLORS.accent};color:${COLORS.onAccent};text-decoration:none;font-weight:700;font-size:15px;padding:14px 28px;border-radius:999px;">
+                <a href="${mailto}" style="display:inline-block;background:${COLORS.accent};color:${COLORS.onAccent};text-decoration:none;font-weight:700;font-size:15px;padding:14px 28px;border-radius:0;">
                   ${escapeHtml(replyLabel)}
                 </a>
               </td>

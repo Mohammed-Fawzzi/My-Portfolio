@@ -440,6 +440,14 @@ html.light .hover\:bg-accent-HOVER:hover {
   font-family: inherit;
 }
 
+.Toastify__toast-container--rtl .Toastify__toast.site-toast {
+  text-align: right;
+}
+
+.Toastify__toast-container--ltr .Toastify__toast.site-toast {
+  text-align: left;
+}
+
 .Toastify__close-button {
   color: rgb(var(--foreground)) !important;
   opacity: 0.55;
@@ -469,7 +477,7 @@ html.light .hover\:bg-accent-HOVER:hover {
   gap: 0.45rem;
   margin-top: 0.15rem;
   padding: 0.4rem 0.75rem;
-  border-radius: 999px;
+  border-radius: 0;
   border: 1px solid rgb(var(--accent) / 0.45);
   background: rgb(var(--accent) / 0.12);
   color: rgb(var(--accent-foreground)) !important;

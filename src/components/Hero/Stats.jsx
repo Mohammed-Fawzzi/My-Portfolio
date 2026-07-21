@@ -1,12 +1,17 @@
 "use client";
 
 import { states } from "@/constants";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CountUp from "react-countup";
 import { useTranslations } from "next-intl";
 
 export default function Stats() {
   const t = useTranslations("stats");
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <section className="pt-4 pb-12 mb-10 xl:pt-0 xl:pb-0">
@@ -17,13 +22,17 @@ export default function Stats() {
               key={index}
               className="flex-1 flex gap-4 items-center justify-center xl:justify-start "
             >
-              <CountUp
-                end={state.num}
-                duration={3}
-                delay={1}
-                prefix="+"
-                className="text-4xl xl:text-6xl font-extrabold"
-              />
+              {mounted ? (
+                <CountUp
+                  end={state.num}
+                  duration={3}
+                  delay={1}
+                  prefix="+"
+                  className="text-4xl xl:text-6xl font-extrabold"
+                />
+              ) : (
+                <span className="text-4xl xl:text-6xl font-extrabold">+0</span>
+              )}
               <p
                 className={`${
                   t(state.key).length < 15 ? "max-w-[100px]" : "max-w-[150px]"

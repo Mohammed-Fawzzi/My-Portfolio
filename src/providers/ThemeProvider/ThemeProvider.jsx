@@ -4,6 +4,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 const ThemeContext = createContext({
   theme: "dark",
+  mounted: false,
   toggleTheme: () => {},
 });
 
@@ -16,11 +17,11 @@ export default function ThemeProvider({ children }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
     const saved = localStorage.getItem("theme");
     if (saved === "light" || saved === "dark") {
       setTheme(saved);
     }
+    setMounted(true);
   }, []);
 
   useEffect(() => {
@@ -36,7 +37,7 @@ export default function ThemeProvider({ children }) {
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, mounted, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   );

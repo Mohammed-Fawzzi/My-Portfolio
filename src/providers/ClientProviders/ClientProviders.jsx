@@ -1,16 +1,23 @@
 "use client";
 
 import { ToastContainer } from "react-toastify";
+import { useLocale } from "next-intl";
 import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
 import ThemeProvider, { useTheme } from "../ThemeProvider/ThemeProvider";
 
 function ThemedToast() {
-  const { theme } = useTheme();
+  const { theme, mounted } = useTheme();
+  const locale = useLocale();
+  const isRtl = locale === "ar";
+
+  if (!mounted) return null;
 
   return (
     <ToastContainer
-      position="top-right"
+      key={locale}
+      position={isRtl ? "top-left" : "top-right"}
+      rtl={isRtl}
       autoClose={2000}
       hideProgressBar={false}
       newestOnTop={false}

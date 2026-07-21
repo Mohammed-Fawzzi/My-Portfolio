@@ -6,8 +6,7 @@ import {
 } from "next-intl/server";
 import { notFound } from "next/navigation";
 import ClientProviders from "@/providers/ClientProviders/ClientProviders";
-import LocaleHtmlAttributes from "@/providers/LocaleHtmlAttributes/LocaleHtmlAttributes";
-import { routing } from "@/i18n/routing";
+import { localeDirections, routing } from "@/i18n/routing";
 import "@/app/globals.css";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -67,6 +66,17 @@ export async function generateMetadata({ params: { locale } }) {
   };
 }
 
+const themeScript = `
+  (function () {
+    try {
+      var t = localStorage.getItem("theme");
+      document.documentElement.classList.add(t === "light" ? "light" : "dark");
+    } catch (e) {
+      document.documentElement.classList.add("dark");
+    }
+  })();
+`;
+
 export default async function LocaleLayout({ children, params: { locale } }) {
   if (!routing.locales.includes(locale)) {
     notFound();
@@ -74,13 +84,19 @@ export default async function LocaleLayout({ children, params: { locale } }) {
 
   setRequestLocale(locale);
   const messages = await getMessages();
+  const dir = localeDirections[locale];
+  const fontClass = locale === "ar" ? "font-arabic" : "font-latin";
 
   return (
-    <>
-      <LocaleHtmlAttributes locale={locale} />
-      <NextIntlClientProvider messages={messages}>
-        <ClientProviders>{children}</ClientProviders>
-      </NextIntlClientProvider>
-    </>
+    <html lang={locale} dir={dir} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
+      <body className={fontClass} suppressHydrationWarning>
+        <NextIntlClientProvider messages={messages}>
+          <ClientProviders>{children}</ClientProviders>
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }
