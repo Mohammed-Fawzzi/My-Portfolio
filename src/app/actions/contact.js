@@ -4,6 +4,13 @@ import { FieldValue } from "firebase-admin/firestore";
 import { contactSchema } from "@/lib/schemas/contact";
 import { getAdminFirestore } from "@/lib/firebase/admin";
 import { getResendClient } from "@/lib/resend";
+import {
+  buildContactNotificationEmail,
+  createReferenceId,
+  extractEmailAddress,
+  formatSentAt,
+  sanitizeFromName,
+} from "@/lib/emails/contactNotification";
 
 const subjectLabels = {
   en: {
@@ -19,15 +26,6 @@ const subjectLabels = {
     other: "أخرى",
   },
 };
-
-function escapeHtml(value) {
-  return String(value)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
-}
 
 export async function submitContact(data, locale = "en") {
   try {
@@ -76,21 +74,33 @@ export async function submitContact(data, locale = "en") {
         ? "بدون موضوع"
         : "No subject";
 
+    const referenceId = createReferenceId();
+    const sentAt = formatSentAt(locale);
+    const siteUrl =
+      process.env.NEXT_PUBLIC_SITE_URL || "https://mohamedfawzzi.site";
+    const fromAddress = extractEmailAddress(fromEmail);
+    const displayName = sanitizeFromName(name);
+
     const resend = getResendClient();
     const { error } = await resend.emails.send({
-      from: fromEmail,
+      from: `${displayName} <${fromAddress}>`,
       to: toEmail,
       replyTo: email,
-      subject: `Portfolio Contact: ${name}`,
-      html: `
-        <h2>New contact form submission</h2>
-        <p><strong>Name:</strong> ${escapeHtml(name)}</p>
-        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-        <p><strong>Phone:</strong> ${escapeHtml(phone || "N/A")}</p>
-        <p><strong>Subject:</strong> ${escapeHtml(subjectLabel)}</p>
-        <p><strong>Message:</strong></p>
-        <p>${escapeHtml(message).replace(/\n/g, "<br />")}</p>
-      `,
+      subject:
+        locale === "ar"
+          ? `رسالة جديدة من ${name} — ${subjectLabel}`
+          : `New message from ${name} — ${subjectLabel}`,
+      html: buildContactNotificationEmail({
+        name,
+        email,
+        phone,
+        subjectLabel,
+        message,
+        locale,
+        referenceId,
+        sentAt,
+        siteUrl,
+      }),
     });
 
     if (error) {
