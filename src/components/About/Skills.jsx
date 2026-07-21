@@ -1,0 +1,88 @@
+"use client";
+
+import React, { useState } from "react";
+import { skillsData } from "@/constants";
+import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl";
+
+export default function Skills() {
+  const t = useTranslations("skills");
+  const [active, setActive] = useState("languages");
+  const tabSkills = [
+    { key: "languages", labelKey: "languages" },
+    { key: "frameworks", labelKey: "frameworks" },
+    { key: "stateManagement", labelKey: "stateManagement" },
+    { key: "styling", labelKey: "styling" },
+    { key: "api", labelKey: "api" },
+    { key: "testing", labelKey: "testing" },
+    { key: "tools", labelKey: "tools" },
+  ];
+
+  return (
+    <section className="py-16 overflow-x-hidden">
+      <div className="container">
+        <div className="text-center mb-10">
+          <h1 className="text-4xl font-bold">
+            {t("title")} <span className="text-accent">{t("titleAccent")}</span>
+          </h1>
+        </div>
+
+        <div className="mb-10 w-full overflow-hidden">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 w-full lg:flex lg:flex-row lg:items-stretch lg:gap-2">
+            {tabSkills.map((item) => (
+              <button
+                key={item.key}
+                onClick={() => setActive(item.key)}
+                className={`
+                  w-full lg:flex-1 lg:min-w-0
+                  min-h-[35px] lg:min-h-[40px]
+                  flex items-center justify-center
+                  rounded-md text-center leading-snug
+                  text-[11px] sm:text-xs lg:text-[11.2px] 
+                  border border-neutral-700/60
+                  transition-colors duration-300 
+                  ${
+                    active === item.key
+                      ? "bg-accent text-on-accent"
+                      : "text-neutral-400 hover:text-neutral-100"
+                  }
+                `}
+              >
+                <span className="block max-w-full font-bold">
+                  {t(`tabs.${item.labelKey}`)}
+                </span>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={active}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+          >
+            {skillsData[active].map((skill) => (
+              <div
+                key={skill.id}
+                className="group relative flex flex-col items-center justify-center
+                h-44 rounded-xl border border-neutral-700/60 bg-transparent
+                hover:border-accent transition-all duration-300"
+              >
+                <div className="text-5xl text-accent mb-4 group-hover:scale-110 transition">
+                  {skill.icon}
+                </div>
+                <p className="text-lg font-semibold">{skill.title}</p>
+
+                <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition bg-accent/10"></div>
+              </div>
+            ))}
+          </motion.div>
+        </AnimatePresence>
+      </div>
+    </section>
+  );
+}

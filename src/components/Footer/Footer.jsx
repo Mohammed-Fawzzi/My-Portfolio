@@ -1,0 +1,46 @@
+"use client";
+
+import { socials } from "@/constants";
+import { motion } from "framer-motion";
+import { Link } from "@/i18n/navigation";
+import React from "react";
+import Logo from "@/components/Logo/Logo";
+
+export default function Footer() {
+  return (
+    <footer className="border-t border-neutral-700/80 py-4">
+      <div className="container mx-auto relative lg:text-sm md:px-1">
+        <Link href="/" className="flex items-center justify-between">
+          <motion.h1
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.3 }}
+            className="text-4xl font-bold cursor-pointer"
+          >
+            <Logo />
+          </motion.h1>
+
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.3 }}
+            className="flex items-center gap-4"
+          >
+            {socials.map((item) => (
+              <Link
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={item.id}
+              >
+                <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 border border-accent text-accent hover:bg-accent-HOVER hover:text-primary rounded-3xl transition-all duration-500 text-icons">
+                  {item.icon}
+                </div>
+              </Link>
+            ))}
+          </motion.div>
+        </Link>
+      </div>
+    </footer>
+  );
+}
