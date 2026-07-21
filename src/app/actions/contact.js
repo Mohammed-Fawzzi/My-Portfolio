@@ -86,10 +86,13 @@ export async function submitContact(data, locale = "en") {
       from: `${displayName} <${fromAddress}>`,
       to: toEmail,
       replyTo: email,
+      headers: {
+        "X-Entity-Ref-ID": referenceId,
+      },
       subject:
         locale === "ar"
-          ? `رسالة جديدة من ${name} — ${subjectLabel}`
-          : `New message from ${name} — ${subjectLabel}`,
+          ? `رسالة جديدة من ${name} — ${subjectLabel} [${referenceId}]`
+          : `New message from ${name} — ${subjectLabel} [${referenceId}]`,
       html: buildContactNotificationEmail({
         name,
         email,
