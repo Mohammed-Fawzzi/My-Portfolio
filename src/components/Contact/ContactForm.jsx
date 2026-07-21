@@ -4,6 +4,7 @@ import { useMemo, useState, useTransition, useCallback } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useLocale, useTranslations } from "next-intl";
+import { toast } from "react-toastify";
 import { FiSend } from "react-icons/fi";
 import { submitContact } from "@/app/actions/contact";
 import {
@@ -55,7 +56,6 @@ export default function ContactForm() {
   const isRtl = locale === "ar";
   const [isPending, startTransition] = useTransition();
   const [showSuccessModal, setShowSuccessModal] = useState(false);
-  const [submitError, setSubmitError] = useState("");
 
   const closeSuccessModal = useCallback(() => {
     setShowSuccessModal(false);
@@ -84,24 +84,26 @@ export default function ContactForm() {
   });
 
   const onSubmit = (data) => {
-    setSubmitError("");
-
     startTransition(async () => {
-      const result = await submitContact(
-        {
-          ...data,
-          subject: data.subject || undefined,
-        },
-        locale
-      );
+      try {
+        const result = await submitContact(
+          {
+            ...data,
+            subject: data.subject || undefined,
+          },
+          locale
+        );
 
-      if (result.success) {
-        reset();
-        setShowSuccessModal(true);
-        return;
+        if (result.success) {
+          reset();
+          setShowSuccessModal(true);
+          return;
+        }
+
+        toast.error(result.error || t("error"));
+      } catch {
+        toast.error(t("error"));
       }
-
-      setSubmitError(result.error || t("error"));
     });
   };
 
@@ -211,10 +213,6 @@ export default function ContactForm() {
           <span>{isPending ? t("sending") : t("submit")}</span>
           <FiSend className="text-icons" />
         </button>
-
-        {submitError && (
-          <p className="text-center text-sm text-red-400">{submitError}</p>
-        )}
       </form>
     </>
   );
