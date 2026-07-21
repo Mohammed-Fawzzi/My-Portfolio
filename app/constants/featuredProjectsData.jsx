@@ -13,10 +13,15 @@ import {
   SiResend,
 } from "react-icons/si";
 
+import fp1 from "@/app/assets/projects/web/freelance/fp1.webp";
+import fp2 from "@/app/assets/projects/web/freelance/fp2.webp";
+import fp4 from "@/app/assets/projects/web/freelance/fp4.webp";
+import fp6 from "@/app/assets/projects/web/freelance/fp6.webp";
+
 export const featuredProjectsData = [
   {
     id: 1,
-    image: "/fp1.webp",
+    image: fp1,
     languages: [
       FaReact,
       RiTailwindCssFill,
@@ -28,7 +33,7 @@ export const featuredProjectsData = [
   },
   {
     id: 4,
-    image: "/fp4.webp",
+    image: fp4,
     languages: [
       FaReact,
       RiTailwindCssFill,
@@ -40,7 +45,7 @@ export const featuredProjectsData = [
   // Special Home Care – Home Healthcare Platform
   // {
   //   id: 6,
-  //   image: "/fp6.webp",
+  //   image: fp6,
   //   languages: [
   //     FaReact,
   //     RiTailwindCssFill,
@@ -51,7 +56,7 @@ export const featuredProjectsData = [
   // },
   {
     id: 6,
-    image: "/fp6.webp",
+    image: fp6,
     languages: [
       FaReact,
       RiNextjsFill,
@@ -64,7 +69,7 @@ export const featuredProjectsData = [
   },
   {
     id: 2,
-    image: "/fp2.webp",
+    image: fp2,
     languages: [
       FaReact,
       RiTailwindCssFill,

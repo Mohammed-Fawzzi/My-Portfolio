@@ -10,6 +10,7 @@ import { FadeRight } from "@/app/constants/animation";
 import Image from "next/image";
 import AboutSection from "../about/AboutSection";
 import { useLocale, useTranslations } from "next-intl";
+import cvFile from "@/app/assets/resume/MohamedFawzziCV.pdf";
 
 export default function Hero() {
   const t = useTranslations("hero");
@@ -52,7 +53,7 @@ export default function Hero() {
               className="flex flex-col items-center md:flex-row md:gap-4"
             >
               <a
-                href="/MohamedFawzziCV.pdf"
+                href={cvFile}
                 download="MohamedFawzziCV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"

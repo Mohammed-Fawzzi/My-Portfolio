@@ -26,6 +26,8 @@ import {
 } from "react-icons/si";
 import { TbApi, TbBrandReactNative } from "react-icons/tb";
 
+import apidog from "@/app/assets/skills/apidog.svg";
+
 export const skillsData = {
   // Languages & Markup
   languages: [
@@ -70,7 +72,7 @@ export const skillsData = {
       title: "Apidog",
       icon: (
         <Image
-          src="/skills/apidog.svg"
+          src={apidog}
           alt="Apidog"
           width={48}
           height={48}

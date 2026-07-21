@@ -4,6 +4,22 @@ const withNextIntl = createNextIntlPlugin("./i18n/request.js");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    dangerouslyAllowSVG: true,
+  },
+  webpack(config) {
+    config.module.rules.push(
+      {
+        test: /\.pdf$/i,
+        type: "asset/resource",
+      },
+      {
+        test: /\.svg$/i,
+        type: "asset/resource",
+      }
+    );
+    return config;
+  },
   async redirects() {
     return [
       {
