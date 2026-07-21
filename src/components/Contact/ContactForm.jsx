@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useLocale, useTranslations } from "next-intl";
 import { toast } from "react-toastify";
 import { FiSend } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 import { submitContact } from "@/app/actions/contact";
 import {
   createContactSchema,
@@ -68,15 +69,16 @@ export default function ContactForm() {
 
   const showSubmitErrorToast = useCallback(() => {
     toast.error(
-      <div className="space-y-2 text-sm leading-relaxed">
+      <div className="space-y-3 text-sm leading-relaxed pe-2">
         <p>{t("error")}</p>
         <a
           href={WHATSAPP_LINK}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex font-semibold underline underline-offset-2"
+          className="site-toast-whatsapp"
         >
-          {t("errorWhatsapp")}
+          <FaWhatsapp className="text-base" aria-hidden="true" />
+          <span>{t("errorWhatsapp")}</span>
         </a>
       </div>,
       { autoClose: 8000 }
