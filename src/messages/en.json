@@ -284,7 +284,8 @@
       "successMessage": "Your message has been sent successfully, and I will get back to you as soon as possible.",
       "browseProjects": "Browse Projects",
       "closeModal": "Close",
-      "error": "Failed to send your message. Please try again.",
+      "error": "Sorry, we couldn't send your message right now. Please try again later, or contact me on WhatsApp.",
+      "errorWhatsapp": "Contact via WhatsApp",
       "subjects": {
         "job": "Job Opportunity",
         "freelance": "Freelance Project",

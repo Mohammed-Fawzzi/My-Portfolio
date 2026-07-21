@@ -401,3 +401,69 @@ html.light .hover\:bg-accent-HOVER:hover {
 .contact-phone-country-label {
   line-height: 1.3;
 }
+
+/* Toastify — match site dark/light tokens */
+:root,
+.dark,
+.light {
+  --toastify-color-light: rgb(var(--surface));
+  --toastify-color-dark: rgb(var(--surface));
+  --toastify-color-info: rgb(var(--accent));
+  --toastify-color-success: rgb(var(--accent));
+  --toastify-color-warning: rgb(var(--accent-hover));
+  --toastify-color-error: rgb(239 68 68);
+  --toastify-text-color-light: rgb(var(--foreground));
+  --toastify-text-color-dark: rgb(var(--foreground));
+  --toastify-color-progress-light: rgb(var(--accent));
+  --toastify-color-progress-dark: rgb(var(--accent));
+  --toastify-color-progress-info: rgb(var(--accent));
+  --toastify-color-progress-success: rgb(var(--accent));
+  --toastify-color-progress-warning: rgb(var(--accent-hover));
+  --toastify-color-progress-error: rgb(var(--accent));
+  --toastify-icon-color-info: rgb(var(--accent));
+  --toastify-icon-color-success: rgb(var(--accent));
+  --toastify-icon-color-warning: rgb(var(--accent-hover));
+  --toastify-icon-color-error: rgb(239 68 68);
+  --toastify-color-progress-bgo: 0.2;
+}
+
+.Toastify__toast.site-toast,
+.Toastify__toast-theme--dark.site-toast,
+.Toastify__toast-theme--light.site-toast {
+  background: rgb(var(--surface)) !important;
+  color: rgb(var(--foreground)) !important;
+  border: 1px solid rgb(var(--accent) / 0.35);
+  border-radius: 0.75rem;
+  box-shadow: 0 12px 32px rgb(0 0 0 / 0.35);
+  font-family: inherit;
+}
+
+.Toastify__toast.site-toast a {
+  color: rgb(var(--accent-foreground));
+}
+
+.Toastify__toast.site-toast a:hover {
+  color: rgb(var(--accent-foreground-hover));
+}
+
+.Toastify__close-button {
+  color: rgb(var(--foreground)) !important;
+  opacity: 0.55;
+}
+
+.Toastify__close-button:hover {
+  opacity: 1;
+}
+
+.Toastify__progress-bar.site-toast-progress,
+.Toastify__progress-bar--wrp .site-toast-progress {
+  background: rgb(var(--accent)) !important;
+}
+
+.Toastify__toast--error.site-toast {
+  border-color: rgb(239 68 68 / 0.45);
+}
+
+.Toastify__toast--success.site-toast {
+  border-color: rgb(var(--accent) / 0.55);
+}

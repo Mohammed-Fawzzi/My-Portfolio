@@ -38,7 +38,7 @@ export async function submitContact(data, locale = "en") {
     if (!parsed.success) {
       return {
         success: false,
-        error: parsed.error.issues[0]?.message || "Invalid form data.",
+        errorKey: "validation",
       };
     }
 
@@ -64,7 +64,7 @@ export async function submitContact(data, locale = "en") {
     if (!toEmail) {
       return {
         success: false,
-        error: "Contact email is not configured.",
+        errorKey: "config",
       };
     }
 
@@ -107,7 +107,7 @@ export async function submitContact(data, locale = "en") {
       console.error("Resend error:", error);
       return {
         success: false,
-        error: "Failed to send email notification.",
+        errorKey: "email",
       };
     }
 
@@ -116,7 +116,7 @@ export async function submitContact(data, locale = "en") {
     console.error("Contact submission error:", error);
     return {
       success: false,
-      error: "Something went wrong. Please try again later.",
+      errorKey: "unknown",
     };
   }
 }

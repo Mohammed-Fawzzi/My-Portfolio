@@ -11,8 +11,13 @@ import {
   createContactSchema,
   subjectOptions,
 } from "@/lib/schemas/contact";
+import { contactData } from "@/constants";
 import ContactSuccessModal from "./ContactSuccessModal";
 import ContactPhoneInput from "./ContactPhoneInput";
+
+const WHATSAPP_LINK =
+  contactData.find((item) => item.link?.includes("wa.me"))?.link ||
+  "https://wa.me/966541005479";
 
 function FormField({
   id,
@@ -61,6 +66,23 @@ export default function ContactForm() {
     setShowSuccessModal(false);
   }, []);
 
+  const showSubmitErrorToast = useCallback(() => {
+    toast.error(
+      <div className="space-y-2 text-sm leading-relaxed">
+        <p>{t("error")}</p>
+        <a
+          href={WHATSAPP_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex font-semibold underline underline-offset-2"
+        >
+          {t("errorWhatsapp")}
+        </a>
+      </div>,
+      { autoClose: 8000 }
+    );
+  }, [t]);
+
   const schema = useMemo(
     () => createContactSchema((key) => t(key)),
     [t]
@@ -100,9 +122,9 @@ export default function ContactForm() {
           return;
         }
 
-        toast.error(result.error || t("error"));
+        showSubmitErrorToast();
       } catch {
-        toast.error(t("error"));
+        showSubmitErrorToast();
       }
     });
   };

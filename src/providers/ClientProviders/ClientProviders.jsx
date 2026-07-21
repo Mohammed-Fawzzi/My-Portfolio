@@ -19,6 +19,8 @@ function ThemedToast() {
       draggable
       pauseOnHover
       theme={theme}
+      toastClassName="site-toast"
+      progressClassName="site-toast-progress"
     />
   );
 }
