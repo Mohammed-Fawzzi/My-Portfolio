@@ -7,11 +7,12 @@ import { FiX, FiCheckCircle } from "react-icons/fi";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
-const AUTO_CLOSE_MS = 5000;
+const AUTO_CLOSE_SECONDS = 5;
 
 export default function ContactSuccessModal({ isOpen, onClose }) {
   const t = useTranslations("contact.form");
   const [mounted, setMounted] = useState(false);
+  const [secondsLeft, setSecondsLeft] = useState(AUTO_CLOSE_SECONDS);
 
   useEffect(() => {
     setMounted(true);
@@ -20,8 +21,18 @@ export default function ContactSuccessModal({ isOpen, onClose }) {
   useEffect(() => {
     if (!isOpen) return;
 
-    const timer = setTimeout(onClose, AUTO_CLOSE_MS);
-    return () => clearTimeout(timer);
+    setSecondsLeft(AUTO_CLOSE_SECONDS);
+
+    const interval = setInterval(() => {
+      setSecondsLeft((prev) => (prev <= 1 ? 0 : prev - 1));
+    }, 1000);
+
+    const timer = setTimeout(onClose, AUTO_CLOSE_SECONDS * 1000);
+
+    return () => {
+      clearInterval(interval);
+      clearTimeout(timer);
+    };
   }, [isOpen, onClose]);
 
   useEffect(() => {
@@ -79,12 +90,16 @@ export default function ContactSuccessModal({ isOpen, onClose }) {
                 {t("successTitle")}
               </h2>
 
-              <p className="mb-6 text-neutral-300">{t("successMessage")}</p>
+              <p className="mb-4 text-neutral-300">{t("successMessage")}</p>
+
+              <p className="mb-5 text-sm text-neutral-400" aria-live="polite">
+                {t("autoClose", { seconds: secondsLeft })}
+              </p>
 
               <Link
                 href="/projects"
                 onClick={onClose}
-                className="rounded-none border border-accent px-6 py-2.5 font-bold text-accent transition-all duration-300 hover:bg-accent-HOVER hover:text-primary"
+                className="inline-flex items-center justify-center rounded-lg bg-accent py-2 px-4 text-sm font-bold text-primary transition-colors duration-300 hover:bg-accent-HOVER"
               >
                 {t("browseProjects")}
               </Link>

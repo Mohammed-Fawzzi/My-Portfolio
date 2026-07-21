@@ -220,7 +220,7 @@ export function buildContactNotificationEmail({
 
             <tr>
               <td style="padding:24px 28px;text-align:center;">
-                <a href="${mailto}" style="display:inline-block;background:${COLORS.accent};color:${COLORS.onAccent};text-decoration:none;font-weight:700;font-size:15px;padding:14px 28px;border-radius:0;">
+                <a href="${mailto}" style="display:inline-block;background:${COLORS.accent};color:${COLORS.onAccent};text-decoration:none;font-weight:700;font-size:14px;padding:10px 18px;border-radius:8px;">
                   ${escapeHtml(replyLabel)}
                 </a>
               </td>
