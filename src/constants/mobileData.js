@@ -3,7 +3,7 @@ import { TbBrandReactNative, TbApi } from "react-icons/tb";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { CiDark } from "react-icons/ci";
 
-import skyMf from "@/assets/projects/mobile/1.png";
+import skyMf from "@/assets/projects/mobile/preview.png";
 
 export const mobileData = [
   {
