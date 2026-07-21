@@ -43,9 +43,7 @@ function CountrySelect({
   const selected = options.find(
     (option) => !option.divider && option.value === value
   );
-  const countryOptions = options.filter(
-    (option) => !option.divider && option.value
-  );
+  const countryOptions = options.filter((option) => !option.divider);
 
   useLayoutEffect(() => {
     if (!isOpen || !rootRef.current) return;
@@ -103,11 +101,11 @@ function CountrySelect({
         aria-expanded={isOpen}
         onClick={() => setIsOpen((open) => !open)}
       >
-        {selected && Icon && (
+        {Icon && (
           <Icon
             aria-hidden
             country={value}
-            label={selected.label}
+            label={selected?.label}
             aspectRatio={undefined}
           />
         )}
@@ -126,10 +124,11 @@ function CountrySelect({
           >
             {countryOptions.map((option) => {
               const isSelected = option.value === value;
-              const Flag = flags[option.value];
+              const optionKey = option.value ?? "international";
+              const Flag = option.value ? flags[option.value] : null;
 
               return (
-                <li key={option.value} role="option" aria-selected={isSelected}>
+                <li key={optionKey} role="option" aria-selected={isSelected}>
                   <button
                     type="button"
                     className={`contact-phone-country-option${
@@ -140,10 +139,23 @@ function CountrySelect({
                       setIsOpen(false);
                     }}
                   >
-                    {Flag && (
+                    {Flag ? (
                       <span className="contact-phone-country-flag" aria-hidden>
                         <Flag title={option.label} />
                       </span>
+                    ) : (
+                      Icon && (
+                        <span
+                          className="contact-phone-country-flag contact-phone-country-flag--intl"
+                          aria-hidden
+                        >
+                          <Icon
+                            country={undefined}
+                            label={option.label}
+                            aspectRatio={undefined}
+                          />
+                        </span>
+                      )
                     )}
                     <span className="contact-phone-country-label">
                       {option.label}
@@ -169,8 +181,8 @@ export default function ContactPhoneInput({ control, locale, id }) {
         international
         defaultCountry="EG"
         countries={ARAB_ME_COUNTRIES}
-        addInternationalOption={false}
-        countryCallingCodeEditable={false}
+        addInternationalOption
+        countryCallingCodeEditable
         labels={locale === "ar" ? ar : en}
         flags={flags}
         countrySelectComponent={CountrySelect}

@@ -386,6 +386,18 @@ html.light .hover\:bg-accent-HOVER:hover {
   height: 100%;
 }
 
+.contact-phone-country-flag--intl {
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(var(--background));
+}
+
+.contact-phone-country-flag--intl .PhoneInputCountryIconImg,
+.contact-phone-country-flag--intl svg {
+  width: 1rem;
+  height: 1rem;
+}
+
 .contact-phone-country-label {
   line-height: 1.3;
 }
