@@ -144,6 +144,10 @@
   "projects": {
     "title": "My",
     "titleAccent": "Projects",
+    "tabs": {
+      "web": "Web Apps",
+      "mobile": "Mobile Apps"
+    },
     "reactNext": {
       "title": "React and Next Js",
       "subtitle": "projects",
@@ -239,6 +243,16 @@
         "4": {
           "title": "DevFolio",
           "description": "DevFolio: a portfolio website that showcases the talents and projects of a full stack developer named Morgan Freeman. With a clean and user-friendly interface."
+        }
+      }
+    },
+    "mobile": {
+      "title": "React Native",
+      "subtitle": "apps",
+      "items": {
+        "1": {
+          "title": "SkyMF – Weather Forecast",
+          "description": "SkyMF: a cross-platform weather application that delivers real-time weather updates and multi-day forecasts through a clean, responsive interface. The app also integrates weather-related news, supports light and dark themes, and saves user preferences locally for a personalized experience. Now available on Google Play."
         }
       }
     }

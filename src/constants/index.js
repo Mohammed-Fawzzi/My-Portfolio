@@ -9,4 +9,5 @@ export { reviewsMeta as reviewsData } from "./reviewsData";
 export { reactNextData } from "./reactNextData";
 export { jsData } from "./jsData";
 export { uiData } from "./uiData";
+export { mobileData } from "./mobileData";
 export { contactMeta as contactData } from "./contactData";
