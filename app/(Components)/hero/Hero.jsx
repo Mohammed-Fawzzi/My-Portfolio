@@ -84,8 +84,8 @@ export default function Hero() {
               src={"/avatar.webp"}
               alt="avatar"
               className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px]"
-              width={400}
-              height={200}
+              width={500}
+              height={500}
             />
           </div>
         </div>

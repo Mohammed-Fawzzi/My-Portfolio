@@ -109,8 +109,8 @@
         "description": "Developed a motorcycle marketplace platform supporting user authentication, ad and service management, and real-time chat between users. Implemented Google login, role-based access control, and an Admin Dashboard for managing users, ads, and analytics."
       },
       "6": {
-        "title": "Special Home Care – Home Healthcare Platform",
-        "description": "Developed a platform for requesting home nursing and healthcare services with ease. Users can book services directly from their phones and receive professional healthcare support at home with safety and convenience in mind."
+        "title": "Wafra Tech – Complete Solutions Platform",
+        "description": "Developed a bilingual corporate website for a technology solutions company using Next.js and React. Implemented multilingual support (Arabic & English) with next-intl, responsive UI, smooth animations using Framer Motion, and a secure contact form integrated with Firebase Firestore for storing inquiries and Resend for email notifications."
       }
     }
   },
@@ -250,7 +250,45 @@
     "talkAccent": "Talk!",
     "description": "Feel free to reach out through any means, I am always ready to connect and work together.",
     "name": "Mohamed Fawzzi",
-    "location": "Riyadh, Saudi Arabia"
+    "location": "Riyadh, Saudi Arabia",
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "e.g. Mohamed Fawzzi",
+      "email": "Email",
+      "emailPlaceholder": "Enter your email address",
+      "phone": "Phone",
+      "phonePlaceholder": "05X XXX XXXX",
+      "subject": "Subject",
+      "subjectPlaceholder": "Select a subject",
+      "message": "Message",
+      "messagePlaceholder": "Write your message here...",
+      "optional": "optional",
+      "requiredNote": "Fields marked with * are required.",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "successTitle": "Message Sent!",
+      "successMessage": "Your message has been sent successfully, and I will get back to you as soon as possible.",
+      "browseProjects": "Browse Projects",
+      "closeModal": "Close",
+      "error": "Failed to send your message. Please try again.",
+      "subjects": {
+        "job": "Job Opportunity",
+        "freelance": "Freelance Project",
+        "inquiry": "General Inquiry",
+        "other": "Other"
+      },
+      "errors": {
+        "nameRequired": "Full name is required.",
+        "nameMin": "Full name is too short.",
+        "nameMax": "Full name is too long.",
+        "emailRequired": "Email is required.",
+        "emailInvalid": "Invalid email address.",
+        "phoneInvalid": "Invalid phone number.",
+        "messageRequired": "Message is required.",
+        "messageMin": "Message is too short.",
+        "messageMax": "Message is too long."
+      }
+    }
   },
   "notFound": {
     "code": "404",

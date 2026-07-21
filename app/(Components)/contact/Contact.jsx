@@ -2,31 +2,19 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { FadeLeft, FadeRight, FadeUp } from "@/app/constants/animation";
-import { contactData } from "@/app/constants";
+import { FadeRight, FadeUp } from "@/app/constants/animation";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
-import { toast } from "react-toastify";
+import ContactForm from "./ContactForm";
 
 export default function Contact() {
   const t = useTranslations("contact");
-  const tc = useTranslations("common");
   const locale = useLocale();
   const isRtl = locale === "ar";
 
-  // const handleCopy = (text) => {
-  //   navigator.clipboard.writeText(text);
-  //   toast.success(tc("copied"));
-  // };
-
-  const getDisplayText = (item) => {
-    if (item.key) return t(item.key);
-    return item.text;
-  };
-
   return (
     <section className="h-full">
-      <div className="container mx-auto py-8 overflow-hidden px-4">
+      <div className="container mx-auto py-8 overflow-x-hidden px-4">
         <div className="h2 text-center mb-10">
           {t("title")} <span className="text-accent">{t("titleAccent")}</span>
         </div>
@@ -49,7 +37,7 @@ export default function Contact() {
                 variants={FadeRight(0.3, isRtl)}
                 initial="hidden"
                 animate="visible"
-                className="border-s-4 border-accent p-3 rounded-lg shadow-lg"
+                className="w-fit border-s-4 border-accent p-3 rounded-lg shadow-lg"
               >
                 <motion.h1
                   variants={FadeUp(0.3)}
@@ -72,42 +60,7 @@ export default function Contact() {
               </motion.p>
             </div>
 
-            {contactData.map((item) => (
-              <motion.div
-                key={item.id}
-                variants={FadeLeft(0.9 + item.id * 0.3, isRtl)}
-                initial="hidden"
-                animate="visible"
-                className="flex items-center w-full gap-3"
-              >
-                <div className="flex items-center gap-3 w-full">
-                  <div className="w-[52px] h-[52px] flex justify-center items-center bg-[#27272c] shadow-xl shrink-0">
-                    {item.icon}
-                  </div>
-
-                  <span
-                    dir={item.forceLtr ? "ltr" : undefined}
-                    onClick={() =>
-                      item.link
-                        ? window.open(item.link, "_blank")
-                        : ""
-                    }
-                    className="
-                      flex-1 text-center
-                      text-xs md:text-[16px]
-                      border font-bold
-                      border-accent text-accent
-                      cursor-pointer
-                      hover:bg-accent-HOVER hover:text-primary
-                      transition-all duration-300
-                      p-[16px] w-fit
-                    "
-                  >
-                    {getDisplayText(item)}
-                  </span>
-                </div>
-              </motion.div>
-            ))}
+            <ContactForm />
           </div>
         </div>
       </div>

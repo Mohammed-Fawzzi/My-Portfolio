@@ -214,3 +214,178 @@ html.light .hover\:bg-accent-HOVER:hover {
 .swiper-pagination-bullet-active {
   background-color: rgb(var(--accent)) !important;
 }
+
+.contact-field {
+  width: 100%;
+  border: 1px solid rgb(var(--accent) / 0.35);
+  border-radius: 0.5rem;
+  background-color: rgb(var(--surface));
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  color: rgb(var(--foreground));
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.contact-field::placeholder {
+  color: rgb(var(--muted-400));
+}
+
+.contact-field:focus {
+  border-color: rgb(var(--accent));
+}
+
+.contact-field:-webkit-autofill,
+.contact-field:-webkit-autofill:hover,
+.contact-field:-webkit-autofill:focus {
+  -webkit-text-fill-color: rgb(var(--foreground));
+  -webkit-box-shadow: 0 0 0 1000px rgb(var(--surface)) inset;
+  box-shadow: 0 0 0 1000px rgb(var(--surface)) inset;
+  transition: background-color 9999s ease-out 0s;
+}
+
+.contact-field option {
+  background-color: rgb(var(--surface));
+  color: rgb(var(--foreground));
+}
+
+.contact-field-select {
+  appearance: none;
+  -webkit-appearance: none;
+  min-height: 2.375rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23a3a3a3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+  padding-inline-end: 2.25rem;
+}
+
+[dir="rtl"] .contact-field-select {
+  background-position: left 0.75rem center;
+  padding-inline-end: 0.75rem;
+  padding-inline-start: 2.25rem;
+}
+
+.contact-phone-field .PhoneInput {
+  width: 100%;
+  min-height: 2.375rem;
+  border: 1px solid rgb(var(--accent) / 0.35);
+  border-radius: 0.5rem;
+  background-color: rgb(var(--surface));
+  padding: 0.5rem 0.75rem;
+  transition: border-color 0.2s ease;
+}
+
+.contact-phone-field .PhoneInput:focus-within {
+  border-color: rgb(var(--accent));
+}
+
+.contact-phone-field .PhoneInputInput {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  font-size: 0.875rem;
+  color: rgb(var(--foreground));
+  outline: none;
+}
+
+.contact-phone-field .PhoneInputInput::placeholder {
+  color: rgb(var(--muted-400));
+}
+
+.contact-phone-field .PhoneInputInput:-webkit-autofill,
+.contact-phone-field .PhoneInputInput:-webkit-autofill:hover,
+.contact-phone-field .PhoneInputInput:-webkit-autofill:focus {
+  -webkit-text-fill-color: rgb(var(--foreground));
+  -webkit-box-shadow: 0 0 0 1000px rgb(var(--surface)) inset;
+  box-shadow: 0 0 0 1000px rgb(var(--surface)) inset;
+  caret-color: rgb(var(--foreground));
+  transition: background-color 9999s ease-out 0s;
+}
+
+.contact-phone-field .PhoneInputCountry {
+  position: relative;
+  margin-inline-end: 0.5rem;
+  align-self: stretch;
+}
+
+.contact-phone-field .PhoneInputCountryIcon--border {
+  box-shadow: 0 0 0 1px rgb(var(--accent) / 0.25);
+}
+
+.contact-phone-country-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: rgb(var(--foreground));
+  cursor: pointer;
+}
+
+.contact-phone-country-trigger:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.contact-phone-field .PhoneInputCountrySelectArrow {
+  color: rgb(var(--muted-400));
+  opacity: 1;
+  border-color: rgb(var(--muted-400));
+}
+
+.contact-phone-country-menu {
+  margin: 0;
+  padding: 0.35rem;
+  list-style: none;
+  max-height: 14rem;
+  overflow-y: auto;
+  border: 1px solid rgb(var(--accent) / 0.35);
+  border-radius: 0.5rem;
+  background-color: rgb(var(--surface));
+  color: rgb(var(--foreground));
+  box-shadow: 0 12px 28px rgb(0 0 0 / 0.35);
+}
+
+.contact-phone-country-option {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.45rem 0.55rem;
+  border: none;
+  border-radius: 0.35rem;
+  background: transparent;
+  color: rgb(var(--foreground));
+  font-size: 0.8125rem;
+  text-align: start;
+  cursor: pointer;
+}
+
+.contact-phone-country-option:hover,
+.contact-phone-country-option.is-selected {
+  background-color: rgb(var(--accent) / 0.15);
+}
+
+.contact-phone-country-flag {
+  display: inline-flex;
+  width: 1.35rem;
+  height: 0.9rem;
+  overflow: hidden;
+  border-radius: 0.1rem;
+  box-shadow: 0 0 0 1px rgb(var(--accent) / 0.25);
+  flex-shrink: 0;
+}
+
+.contact-phone-country-flag svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.contact-phone-country-label {
+  line-height: 1.3;
+}

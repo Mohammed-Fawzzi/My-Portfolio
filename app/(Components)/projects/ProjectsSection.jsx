@@ -75,7 +75,7 @@ export default function ProjectsSection() {
             {t("ui.subtitle")}
           </motion.h1>
         </motion.div>
-        <Ui />
+        {/* <Ui /> */}
       </div>
     </section>
   );

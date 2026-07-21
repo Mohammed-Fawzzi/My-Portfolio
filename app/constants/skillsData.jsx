@@ -1,6 +1,5 @@
 import {
   FaBootstrap,
-  FaChrome,
   FaCss3,
   FaGitAlt,
   FaGithub,
@@ -11,6 +10,7 @@ import {
 import { RiNextjsFill, RiStackLine, RiTailwindCssFill } from "react-icons/ri";
 import Image from "next/image";
 import {
+  SiAxios,
   SiCypress,
   SiFigma,
   SiFramer,
@@ -21,10 +21,10 @@ import {
   SiRedux,
   SiShadcnui,
   SiSocketdotio,
+  SiTestinglibrary,
   SiTypescript,
-  SiVisualstudiocode,
 } from "react-icons/si";
-import { TbBrandReactNative } from "react-icons/tb";
+import { TbApi, TbBrandReactNative } from "react-icons/tb";
 
 export const skillsData = {
   // Languages & Markup
@@ -61,36 +61,36 @@ export const skillsData = {
 
   // APIs & Integration
   api: [
-    { id: 17, title: "RESTful APIs", icon: <SiPostman /> },
-    { id: 18, title: "WebSocket (Socket.io)", icon: <SiSocketdotio /> },
+    { id: 17, title: "RESTful APIs", icon: <TbApi /> },
+    { id: 18, title: "Axios", icon: <SiAxios /> },
+    { id: 19, title: "WebSocket (Socket.IO)", icon: <SiSocketdotio /> },
+    { id: 20, title: "Postman", icon: <SiPostman /> },
     {
-      id: 19,
-      title: "ApiDog",
+      id: 21,
+      title: "Apidog",
       icon: (
         <Image
           src="/skills/apidog.svg"
-          alt="ApiDog"
+          alt="Apidog"
           width={48}
           height={48}
           className="object-contain"
         />
       ),
     },
-    { id: 20, title: "Postman", icon: <SiPostman /> },
   ],
 
   // Testing
   testing: [
-    { id: 21, title: "Jest", icon: <SiJest /> },
-    { id: 22, title: "Cypress (E2E)", icon: <SiCypress /> },
+    { id: 22, title: "Jest", icon: <SiJest /> },
+    { id: 23, title: "Cypress (E2E)", icon: <SiCypress /> },
+    { id: 24, title: "React Testing Library", icon: <SiTestinglibrary /> },
   ],
 
   // Version Control & Tools
   tools: [
-    { id: 23, title: "Git", icon: <FaGitAlt /> },
-    { id: 24, title: "GitHub", icon: <FaGithub /> },
-    { id: 25, title: "Figma", icon: <SiFigma /> },
-    // { id: 24, title: "Chrome DevTools", icon: <FaChrome /> },
-    // { id: 26, title: "VS Code", icon: <SiVisualstudiocode /> },
+    { id: 25, title: "Git", icon: <FaGitAlt /> },
+    { id: 26, title: "GitHub", icon: <FaGithub /> },
+    { id: 27, title: "Figma", icon: <SiFigma /> },
   ],
 };
