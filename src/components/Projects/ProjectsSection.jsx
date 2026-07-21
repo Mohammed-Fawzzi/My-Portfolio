@@ -9,6 +9,33 @@ import ReactAndNext from "./reactAndNext";
 import Mobile from "./Mobile";
 import { useLocale, useTranslations } from "next-intl";
 
+function SectionTitle({ title, subtitle, isRtl }) {
+  const accent = (
+    <span className="text-accent inline-block" dir="ltr">
+      {title}
+    </span>
+  );
+
+  return (
+    <motion.h1
+      variants={FadeUp(0.3)}
+      initial="hidden"
+      animate="visible"
+      className="text-xl font-bold"
+    >
+      {isRtl ? (
+        <>
+          <span>{subtitle}</span> {accent}
+        </>
+      ) : (
+        <>
+          {accent} <span>{subtitle}</span>
+        </>
+      )}
+    </motion.h1>
+  );
+}
+
 export default function ProjectsSection() {
   const t = useTranslations("projects");
   const locale = useLocale();
@@ -70,15 +97,11 @@ export default function ProjectsSection() {
                 animate="visible"
                 className="border-s-4 border-accent p-3 rounded-t-lg rounded-b-lg my-4"
               >
-                <motion.h1
-                  variants={FadeUp(0.3)}
-                  initial="hidden"
-                  animate="visible"
-                  className="text-xl font-bold"
-                >
-                  <span className="text-accent">{t("reactNext.title")} </span>
-                  {t("reactNext.subtitle")}
-                </motion.h1>
+                <SectionTitle
+                  title={t("reactNext.title")}
+                  subtitle={t("reactNext.subtitle")}
+                  isRtl={isRtl}
+                />
               </motion.div>
               <ReactAndNext />
 
@@ -88,15 +111,11 @@ export default function ProjectsSection() {
                 animate="visible"
                 className="border-s-4 border-accent p-3 rounded-t-lg rounded-b-lg my-4"
               >
-                <motion.h1
-                  variants={FadeUp(0.3)}
-                  initial="hidden"
-                  animate="visible"
-                  className="text-xl font-bold"
-                >
-                  <span className="text-accent">{t("js.title")} </span>
-                  {t("js.subtitle")}
-                </motion.h1>
+                <SectionTitle
+                  title={t("js.title")}
+                  subtitle={t("js.subtitle")}
+                  isRtl={isRtl}
+                />
               </motion.div>
               <Js />
 
@@ -106,15 +125,11 @@ export default function ProjectsSection() {
                 animate="visible"
                 className="border-s-4 border-accent p-3 rounded-t-lg rounded-b-lg my-4"
               >
-                <motion.h1
-                  variants={FadeUp(0.3)}
-                  initial="hidden"
-                  animate="visible"
-                  className="text-xl font-bold"
-                >
-                  <span className="text-accent">{t("ui.title")} </span>
-                  {t("ui.subtitle")}
-                </motion.h1>
+                <SectionTitle
+                  title={t("ui.title")}
+                  subtitle={t("ui.subtitle")}
+                  isRtl={isRtl}
+                />
               </motion.div>
               <Ui /> */}
             </motion.div>
@@ -132,15 +147,11 @@ export default function ProjectsSection() {
                 animate="visible"
                 className="border-s-4 border-accent p-3 rounded-t-lg rounded-b-lg my-4"
               >
-                <motion.h1
-                  variants={FadeUp(0.3)}
-                  initial="hidden"
-                  animate="visible"
-                  className="text-xl font-bold"
-                >
-                  <span className="text-accent">{t("mobile.title")} </span>
-                  {t("mobile.subtitle")}
-                </motion.h1>
+                <SectionTitle
+                  title={t("mobile.title")}
+                  subtitle={t("mobile.subtitle")}
+                  isRtl={isRtl}
+                />
               </motion.div>
               <Mobile />
             </motion.div>
