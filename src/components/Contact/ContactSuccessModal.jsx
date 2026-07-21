@@ -92,7 +92,7 @@ export default function ContactSuccessModal({ isOpen, onClose }) {
 
               <p className="mb-4 text-neutral-300">{t("successMessage")}</p>
 
-              <p className="mb-5 text-sm text-neutral-400" aria-live="polite">
+              <p className="mb-5 text-sm font-semibold text-accent" aria-live="polite">
                 {t("autoClose", { seconds: secondsLeft })}
               </p>
 

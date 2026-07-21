@@ -10,10 +10,12 @@ import ThemeToggle from "@/providers/ThemeProvider/ThemeToggle";
 import LocaleSwitcher from "./LocaleSwitcher";
 import Logo from "@/components/Logo/Logo";
 import { useScrollProgress } from "@/hooks/useScrollProgress";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 export default function Navbar() {
   const t = useTranslations("nav");
+  const locale = useLocale();
+  const isRtl = locale === "ar";
   const pathName = usePathname();
   const navRef = useRef(null);
   const [barTop, setBarTop] = useState(0);
@@ -121,7 +123,9 @@ export default function Navbar() {
                 {isMenuOpen ? (
                   <IoClose className="text-accent text-3xl" />
                 ) : (
-                  <RiMenu3Line className="text-accent text-3xl" />
+                  <RiMenu3Line
+                    className={`text-accent text-3xl ${isRtl ? "-scale-x-100" : ""}`}
+                  />
                 )}
               </button>
             </div>
